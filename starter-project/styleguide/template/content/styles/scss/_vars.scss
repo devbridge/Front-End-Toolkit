@@ -1,0 +1,135 @@
+$color-white: #fff;
+$color-black:#000;
+$color-grey: #ccc;
+$color-grey-shade-1:#e6e6e6;
+$color-grey-shade-2:#f1f1f2;
+$color-grey-shade-3:#FAFAFA;
+$color-black:#292a2f;
+$color-black-shade-1:#404041;
+$color-black-shade-2:#4d4d4d;
+$color-black-shade-3:#808080;
+
+$bg-body-color: $color-grey-shade-2;
+$bg-page-color: $color-white;
+$bg-sidebar-color: $color-black;
+
+$text-page-color: $color-black-shade-1;
+$text-sidebar-color: $color-black-shade-3;
+$text-sidebar-active-color: $color-white;
+$text-light-color:$color-white;
+
+$border-light-color: $color-grey-shade-2;
+$border-color: $color-grey-shade-1;
+$border-strong-color: $color-black-shade-2;
+$border-black-color: $color-black;
+
+@mixin font-extrabold() {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+}
+
+@mixin font-bold() {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+@mixin font-semibold() {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+@mixin font-regular() {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+@mixin font-light() {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+@mixin position($position: relative, $coordinates: null null null null, $z-index: null) {
+
+    @if type-of($position) == list {
+        $coordinates: $position;
+        $position: relative;
+    }
+
+    $top: nth($coordinates, 1);
+    $right: nth($coordinates, 2);
+    $bottom: nth($coordinates, 3);
+    $left: nth($coordinates, 4);
+
+    position: $position;
+
+    @if ($top and $top == auto) or (type-of($top) == number) {
+        top: $top;
+    }
+
+    @if ($right and $right == auto) or (type-of($right) == number) {
+        right: $right;
+    }
+
+    @if ($bottom and $bottom == auto) or (type-of($bottom) == number) {
+        bottom: $bottom;
+    }
+
+    @if ($left and $left == auto) or (type-of($left) == number) {
+        left: $left;
+    }
+
+    z-index: $z-index;
+}
+
+@mixin size($size) {
+    $height: nth($size, 1);
+    $width: $height;
+
+    @if length($size) > 1 {
+        $height: nth($size, 2);
+    }
+
+    @if $height == auto or (type-of($height) == number and not unitless($height)) {
+        height: $height;
+    }
+
+    @if $width == auto or (type-of($width) == number and not unitless($width)) {
+        width: $width;
+    }
+}
+
+%clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%outline-none {
+    &:focus {
+        outline: none;
+    }
+}
+
+%list-style {
+    margin: 0;
+    li {
+        margin: 0;
+        @include font-regular();
+        list-style: none;
+        a {
+            text-decoration: none;
+            text-transform: none;
+        }
+    }
+}

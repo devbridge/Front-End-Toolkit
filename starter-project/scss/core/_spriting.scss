@@ -1,0 +1,143 @@
+//Created by Paul G. Easy Sprites v1.0
+//https://github.com/paulgabronis/Easy-Sprites
+$icons-map: 'icons' !default;
+$retina-sprite: false !default;
+
+@function path($folder: false, $folder-retina: false) {
+    @for $i from 1 through length($folder) {
+        $sprite-folder: "#{nth($folder, $i)}/*.png" !global;
+        $sprite-folder-retina: "#{nth($folder-retina, $i)}@2x/*.png" !global;
+    }
+    @for $i from 1 through length($sprite-folder) {
+        @if ($folder) {
+            $sprite-path: sprite-map(#{nth($sprite-folder, $i)}, $layout: smart);
+            @return ($sprite-path);
+        }
+        @if ($folder-retina) {
+            $sprite-path-retina: sprite-map(#{nth($sprite-folder-retina, $i)}, $layout: smart);
+            @return ($sprite-path-retina);
+        }
+    }
+}
+
+@function background($map, $name: false, $hover-name: false, $active-name: false) {
+    @if $name {
+        @return (sprite-position(path($folder: $map), $name));
+    }
+    @if $hover-name {
+        @return (sprite-position(path($folder: $map), $hover-name));
+    }
+    @if $active-name {
+        @return (sprite-position(path($folder: $map), $active-name));
+    }
+}
+
+@function background-retina($map-retina, $name: false, $hover-name: false, $size-retina: false) {
+    @if $name {
+        @return (round(nth(sprite-position(path($folder-retina: $map-retina), $name), 1) / 2) round(nth(sprite-position(path($folder-retina: $map-retina), $name), 2) / 2));
+    }
+    @if $hover-name {
+        @return (round(nth(sprite-position(path($folder-retina: $map-retina), $hover-name), 1) / 2) round(nth(sprite-position(path($folder-retina: $map-retina), $hover-name), 2) / 2));
+    }
+    @if $size-retina {
+        @return ((ceil(image-width(sprite-path(path($folder-retina: $map-retina))) / 2) auto));
+    }
+}
+
+@mixin _sprite-core($name, $size, $center, $center-y, $center-x, $map) {
+    $half-sprite: 50%;
+    $image-width: image-width(sprite-file(path($folder: $map), $name));
+    $image-height: image-height(sprite-file(path($folder: $map), $name));
+
+    @if $size {
+        width: $image-width;
+        height: $image-height;
+    }
+
+    @if $center {
+        position: absolute;
+        top: $half-sprite;
+        left: $half-sprite;
+        margin: {
+            top: -($image-height / 2);
+            left: -($image-width / 2);
+        }
+    } @else if $center-y {
+        position: absolute;
+        top: $half-sprite;
+        margin: {
+            top: -($image-height / 2);
+        }
+    } @else if $center-x {
+        position: absolute;
+        left: $half-sprite;
+        margin: {
+            left: -($image-width / 2);
+        }
+    }
+}
+
+@mixin _sprite-core-retina($name, $size, $center, $center-y, $center-x, $map-retina) {
+    $retina-image-width: (image-width(sprite-file(path($folder-retina: $map-retina), $name)) / 2);
+    $retina-image-height: (image-height(sprite-file(path($folder-retina: $map-retina), $name)) / 2);
+
+    @if $size {
+        width: $retina-image-width;
+        height: $retina-image-height;
+    }
+
+    @if $center {
+        margin: {
+            top: -($retina-image-height / 2);
+            left: -($retina-image-width / 2);
+        }
+    } @else if $center-y {
+        margin: {
+            top: -($retina-image-height / 2);
+        }
+    } @else if $center-x {
+        margin: {
+            left: -($retina-image-width / 2);
+        }
+    }
+}
+
+@mixin get-sprite($name, $size: true, $center: false, $center-y: false, $center-x: false, $map: $icons-map, $map-retina: $map) {
+
+    background: path($folder: $map) no-repeat background($map, $name);
+    @include _sprite-core($name, $size, $center, $center-y, $center-x, $map);
+    @content;
+
+    @if $retina-sprite {
+        @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2.0) {
+            background: path($folder-retina: $map-retina) no-repeat background-retina($map-retina, $name);
+            background-size: background-retina($map-retina, $size-retina: true);
+            @include _sprite-core-retina($name, $size, $center, $center-y, $center-x, $map-retina);
+        }
+    }
+}
+
+@mixin get-sprite-state($name, $hover: false, $active: false, $map: $icons-map, $map-retina: $map) {
+    $hover-name: $name + -hover;
+    $active-name: $name + -active;
+
+    @if $hover {
+        background-position: background($map, $hover-name);
+    } @else if $active {
+        background-position: background($map, $active-name);
+    } @else {
+        background-position: background($map, $name);
+    }
+
+    @if $retina-sprite {
+        @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2.0) {
+            @if $hover {
+                background-position: background-retina($map-retina, $hover-name);
+            } @else if $active {
+                background-position: background-retina($map-retina, $active-name);
+            } @else {
+                background-position: background-retina($map-retina, $name);
+            }
+        }
+    }
+}

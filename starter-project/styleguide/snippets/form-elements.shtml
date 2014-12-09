@@ -1,0 +1,142 @@
+<!--#include virtual="/styleguide/template/header.shtml" -->
+
+<snippet>
+    <title>Default Form</title>
+
+        <form method="post" action="">
+
+            <label for="name">Name: <abbr title="Required">*</abbr></label>
+            <div class="field-wrapper">
+                <input type="text" id="name" name="name" class="field-text" placeholder="Enter your name" title="Name field is required!" value="" required >
+            </div>
+
+            <label for="email">Email: <abbr title="Required">*</abbr></label>
+            <div class="field-wrapper">
+                <input type="email" id="email" name="email" class="field-text" placeholder="Enter your email" title="Email field is required!" value="" required >
+            </div>
+
+            <label for="phone">Phone: <abbr title="Required">*</abbr></label>
+            <div class="field-wrapper">
+                <input type="tel" id="phone" name="phone" class="field-text" placeholder="Enter your phone" title="Phone field is required!" value="" required >
+            </div>
+
+            <label for="message">Message:</label>
+            <div class="field-wrapper">
+                <textarea id="message" name="message" class="field-textarea" placeholder="Type your message here"></textarea>
+            </div>
+
+            <label for="select1">Select box:</label>
+            <div class="field-wrapper">
+                <select class="field-select" id="select1" name="selectbox">
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                    <option value="">Option 5</option>
+                </select>
+            </div>
+
+            <fieldset class="form-controls">
+                <legend>Radios:</legend>
+                <div class="field-wrapper">
+                    <label for="radio"><input type="radio" id="radio" name="radio-contact" />Option 1</label>
+                    <label for="radio2"><input type="radio" id="radio2" name="radio-contact"/>Option 2</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="controls">
+                <legend>Checkboxes:</legend>
+                <div class="field-wrapper">
+                    <label for="checkbox"><input type="checkbox" id="checkbox" name="radio-contact"/>Option 1</label>
+                    <label for="checkbox2"><input type="checkbox" id="checkbox2" name="radio-contact"/>Option 2</label>
+                </div>
+            </fieldset>
+
+            <div class="field-wrapper">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+
+        </form>
+
+</snippet>
+
+<snippet>
+    <title>Text Field</title>
+    <label for="name1">Name:</label>
+    <div class="field-wrapper">
+        <input type="text" id="name1" name="name" class="field-text" placeholder="Enter your name" value="">
+    </div>
+</snippet>
+
+<snippet>
+    <title>TextArea Field</title>
+    <label for="message1">Message:</label>
+    <div class="field-wrapper">
+        <textarea id="message1" name="message" class="text-area" placeholder="Type your message here"></textarea>
+    </div>
+</snippet>
+
+<snippet>
+    <title>Select Field</title>
+    <label for="select2">Select box:</label>
+    <div class="field-wrapper">
+        <select class="field-select" id="select2" name="selectbox">
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+            <option value="">Option 4</option>
+            <option value="">Option 5</option>
+        </select>
+    </div>
+</snippet>
+
+<snippet>
+    <title>Radio Buttons</title>
+    <label for="radio3">Radios:</label>
+    <div class="field-wrapper">
+        <label for="radio"><input type="radio" id="radio3" name="radio-contact" />Option 1</label>
+        <label for="radio2"><input type="radio" id="radio4" name="radio-contact"/>Option 2</label>
+    </div>
+</snippet>
+
+<snippet>
+    <title>Checkboxes</title>
+    <label for="checkbox3">Checkboxes:</label>
+    <div class="field-wrapper">
+        <label for="checkbox"><input type="checkbox" id="checkbox3" name="radio-contact"/>Option 1</label>
+        <label for="checkbox2"><input type="checkbox" id="checkbox4" name="radio-contact"/>Option 2</label>
+    </div>
+</snippet>
+
+<snippet>
+    <title>Form Button</title>
+    <div class="field-wrapper">
+        <button type="submit" class="btn">Submit</button>
+    </div>
+</snippet>
+
+
+<snippet>
+    <title>Server Side Messages</title>
+    <div class="default-messages-container">
+        <div class="error-user-message-container">
+            <div class="error user-message">
+                <p>Error message - ipsum dolor sit amet adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="caution-user-message-container">
+            <div class="caution user-message">
+                <p>Caution message - Lorem ipsum dolor sit amet adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="success-user-message-container">
+            <div class="success user-message">
+                <p>Success message - Lorem ipsum dolor sit amet adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+</snippet>
+
+
+<!--#include virtual="/styleguide/template/footer.shtml" -->
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]>
+<html class="ie7"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8"><![endif]-->
+<!--[if IE 9]>
+<html class="ie9"><![endif]-->
+<!--[if !IE]><!-->
+<html><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <title>Title</title>
+    <meta name="description" content="">
+    <link href="content/styles/site-styles.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+        <script src="scripts/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            var el, head;
+            el = document.createElement('script');
+            el.type = 'text/javascript';
+            el.async = true;
+            el.setAttribute("data-main","scripts/main");
+            el.src = 'scripts/require.js';
+            head = document.getElementsByTagName('script')[0];
+            head.parentNode.insertBefore(el, head);
+        }());
+    </script>
+
+
+    <style type="text/css">
+        body{ font-family: georgia, sans-serif; font-size: 24px; line-height: 1.9; margin: 50px;}
+        h1{font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-size: 150px; line-height: 1.0; margin: 0.25em 0}
+    </style>
+
+</head>
+<body>
+    <h1>Hello You</h1>
+    <p>Before diving in to your project, there are a few things you need to know:</p>
+    <ul>
+        <li><a href="https://bitbucket.org/devbridge/frontend-toolkit/wiki/Bible" target="_blank">Front-end Bible</a> - Set of rules and guidelines to help you to make a better and more cleaner web page.</li>
+        <li><a href="https://bitbucket.org/devbridge/frontend-toolkit/wiki/Layouts" target="_blank">HTML Layout samples</a> - The four most used layout templates.</li>
+        <li><a href="https://bitbucket.org/devbridge/frontend-toolkit/wiki/Sass" target="_blank">Sass documentation</a> - Helpful guidelines how to make your Scss more leaner.</li>
+        <li><a href="/styleguide">Styleguide demo</a> - Styleguide demo page.</li>
+    </ul>
+</body>
+</html>
