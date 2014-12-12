@@ -1,0 +1,25 @@
+@mixin clearfix {
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+        height: 0;
+    }
+}
+
+%clearfix {
+    @include clearfix;
+}
+
+.clearfix {
+    @extend %clearfix;
+}
+
+@mixin box-sizing {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+%box-sizing {
+    @include box-sizing;
+}

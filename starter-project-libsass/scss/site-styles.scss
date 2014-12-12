@@ -1,0 +1,27 @@
+//Extenders
+@import "components/extenders";
+
+//Core files
+@import
+    "core/mixins",
+    "core/functions";
+
+//Spriting
+@import
+    "core/spriting";
+    $retina-sprite: true;
+
+//Components
+@import
+    //"components/normalize",
+    //"components/plugins/slick",
+    //"components/slider",
+    //"components/modal",
+    //"components/tables",
+    "components/forms";
+
+//Project styles
+@import
+    "site/layout",
+    "site/modules",
+    "site/pages/home";
