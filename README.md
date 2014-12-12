@@ -1,5 +1,16 @@
 # **Front-End Toolkit** #
+This project is made by Devbridge Group front-end development team. The purpose of it – help unify the workflow and standardize the code inside the team. 
 
+##Starter Templates##
+Lorem impsum.
+
+###Libsass Starter Template###
+Lorem impsum.
+
+###Compass Starter Template###
+Lorem impsum.
+
+##Wiki##
 A collection of resources, useful tools and technologies for front-end web development.
 
 * **[Front-End Bible](https://github.com/devbridge/Front-End-Toolkit/wiki/Front-End-Bible)** - _Set of rules for front-end developer._
