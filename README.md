@@ -4,10 +4,10 @@ This project is made by Devbridge Group front-end development team. The purpose 
 ##Starter Templates##
 Lorem impsum.
 
-###Libsass Starter Template###
+####Libsass Starter Template####
 Lorem impsum.
 
-###Compass Starter Template###
+####Compass Starter Template####
 Lorem impsum.
 
 ##Wiki##
