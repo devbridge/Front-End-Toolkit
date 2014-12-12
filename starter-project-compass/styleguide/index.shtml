@@ -1,0 +1,144 @@
+<!--#include virtual="/styleguide/template/header.shtml" -->
+
+
+<h1 class="sg-page-title">Home</h1>
+<div class="snippet-container sg-clearfix">
+
+    <div class="sg-snippet-description">
+
+        <h2 class="sg-headline">Welcome</h2>
+
+        <p class="sg-headline">
+            A style guide is a set of visual elements and guidelines for specific web project of specific organization. The goal of the style guides is to enforce consistency across the project.
+        </p>
+
+        <h2>For Developers</h2>
+
+
+        <h3>Installation</h3>
+
+        <ol>
+            <li>Copy the styleguide source files to your project directory from <a href="https://bitbucket.org/devbridge/frontend-toolkit/src/3737e7cb0ac1892d8bb4399b65d0e2a72ac11eb2/starter-project/?at=master" target="_blank">frontend-toolkit</a>.</li>
+            <li>
+                Make sure your project has SSI (Server Side Includes) enabled. We use html includes to construct the styleguide template.
+                To enable SSI on IIS server add following to your Web.config file:
+<pre class="code-sample" contenteditable="true">
+&lt;system.webServer&gt;
+    &lt;handlers&gt;
+        &lt;add name="SSI-html" path="*.html" verb="*" modules="ServerSideIncludeModule" resourceType="Unspecified" /&gt;
+        &lt;add name="ServerSideIncludeModule" path="*.html" verb="*" modules="ServerSideIncludeModule" resourceType="File" /&gt;
+    &lt;/handlers&gt;
+&lt;/system.webServer&gt;
+</pre>
+
+            </li>
+            <li>Setup <strong>Grunt</strong> to automatically update sidebar navigation:
+                <ol>
+                    <li>Before using Grunt make sure you have <a href="http://nodejs.org/" target="_blank">node.js</a> installed on your machine.</li>
+                    <li>Double check if you have copied <span class="code-sample">gruntfile.js</span> and <span class="code-sample">package.json</span> to your project root directory.</li>
+                    <li>In CMD go to your project directory and run:
+                        <ul>
+                            <li><span class="code-sample">npm install grunt -g</span>.</li>
+                            <li><span class="code-sample">npm install grunt-cli -g</span>.</li>
+                            <li><span class="code-sample">npm install</span>.</li>
+                            <li><span class="code-sample">grunt watch</span>.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <h3>Usage</h3>
+        <p>Before you start using a style guide you need to include CSS references of your project to the template's header '/styleguide/template/header.shtml'. Once it's done, paste your html code (snippets) inside custom tags described below.</p>
+
+        <h4>Snippets</h4>
+        <p>
+            All snippets have to be defined inside 'snippets' folder. Each file in the folder represents separate component and will be listed in the sidebar menu as separate item.
+            We use <a href="http://gruntjs.com/" target="_blank">Grunt</a> to automatically update sidebar menu but it can be done manually by updating '\styleguide\scripts\snippets.txt' file.
+        </p>
+        <p>To create new snippet you have to wrap your code with a custom html tag <span class="code-sample">&lt;snippet&gt;</span> and add title to it <span class="code-sample">&lt;title&gt;</span>. Example:</p>
+<pre class="code-sample" contenteditable="true">
+&lt;snippet&gt;
+    &lt;title&gt;Name of the snippet&lt;/title&gt;
+    &lt;!-- Your code goes here --&gt;
+&lt;/snippet&gt;
+</pre>
+
+        <p>
+            <strong>You can use optional tags to enhance your snippet:</strong><br>
+            Add type="important" attribute if you want to make your description more visible:
+        </p>
+        <pre class="code-sample" contenteditable="true">&lt;description type="important"&gt;&lt;/description&gt;</pre>
+        <p>If you need extra wrapper to handle your snippet, add <span class="code-sample">&lt;holder&gt</span> tag. With holder element you can apply custom CSS to the snippet and it won't be visible in the code view:</p>
+<pre class="code-sample" contenteditable="true">
+&lt;snippet&gt;
+    &lt;title&gt;Name of the snippet&lt;/title&gt;
+    &lt;holder style="..."&gt;
+        &lt;!-- Your code goes here --&gt;
+    &lt;/holder&gt;
+&lt;/snippet&gt;
+</pre>
+
+        <h4>Static snippets</h4>
+        <p>
+            Static snippets represent global styles of the project like colors or fonts. They located inside 'static/index.shtml' file. Currently we have three static snippets, colors, fonts and typography.
+        </p>
+        <p>
+            <strong>Colors snippet</strong><br>
+            To use color snippet put your Sass color variables inside <span class="code-sample">&lt;palette&gt;&lt;color&gt;</span> tags:
+        </p>
+<pre class="code-sample" contenteditable="true">
+&lt;palette&gt;
+    &lt;colors&gt;
+        $blue: #26A9E0;
+        $green: #39B54A;
+        $red: #EE4036;
+    &lt;/colors&gt;
+&lt;/palette&gt;
+</pre>
+        <p>
+            If you have two level variable declaration, you can show them by wrapping code in to the <span class="code-sample">&lt;vars&gt;</span> tag:
+        </p>
+<pre class="code-sample" contenteditable="true">
+&lt;palette&gt;
+    &lt;colors&gt;
+        $blue: #26A9E0;
+        $green: #39B54A;
+        $red: #EE4036;
+    &lt;/colors&gt;
+    &lt;vars&gt;
+        $border-color: $blue;
+        $bg-color: $green;
+        $text-color: $red;
+    &lt;/vars&gt;
+&lt;/palette&gt;
+</pre>
+        <p>
+            <strong>Fonts snippet</strong><br>
+            To use fonts snippet put your Sass font declaration variables inside <span class="code-sample">&lt;fonts&gt;</span> tag:
+        </p>
+<pre class="code-sample" contenteditable="true">
+&lt;fonts&gt;
+    $font-oswald: 'Oswald', sans-serif;;
+    $font-droid: 'Droid', serif;
+&lt;/fonts&gt;
+</pre>
+        <p>If you want to show different font styles (e.g. bold, italic) of the same font, you can place them after the font variable:</p>
+<pre class="code-sample" contenteditable="true">
+&lt;fonts&gt;
+    $font-oswald: 'Oswald', sans-serif;
+    $font-oswald: 'Oswald', sans-serif; font-weight: 700;
+    $font-oswald: 'Oswald', sans-serif; font-weight: 700; font-style: italic;
+&lt;/fonts&gt;
+</pre>
+        <p>
+            <strong>Typography snippet</strong><br>
+            Typography snippet is hardcoded and doesn't have any option. It represent default styles of the headings and text.
+        </p>
+
+
+
+    </div>
+</div>
+
+<!--#include virtual="/styleguide/template/footer.shtml" -->

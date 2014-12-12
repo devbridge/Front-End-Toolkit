@@ -1,8 +1,13 @@
 /.idea
 
-/starter-project/.idea
-/starter-project/node_modules
+/starter-project-compass/.idea
+/starter-project-compass/.sass-cache
 
 /starter-project-libsass/.idea
 /starter-project-libsass/node_modules
 
+/starter-template-compass/.idea
+/starter-template-compass/.sass-cache
+
+/starter-template-libsass/.idea
+/starter-template-libsass/node_modules
