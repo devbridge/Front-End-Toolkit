@@ -1,14 +1,16 @@
 # **Front-End Toolkit** #
-This project is made by Devbridge Group front-end development team. The purpose of it – help unify the workflow and standardize the code inside the team. 
+This project is a collections of resources, best practices and tools for front-end developers. Is made to help unify the workflow and standardize the code inside our team. 
 
 ##Starter Templates##
-Lorem impsum.
-
-####Libsass Starter Template####
-Lorem impsum.
+To help to save some time creating new project we have created starter templates. 
+We use Sass and Grunt in all our project. Depending on technologies used in the project you have two templates to choose from:
 
 ####Compass Starter Template####
-Lorem impsum.
+This template uses Compass to compile `.scss` files and Grunt to watch `/styleguide` folder. More about styleguide [here](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide). 
+
+####Libsass Starter Template####
+Lorem ipsum. 
+
 
 ##Wiki##
 A collection of resources, useful tools and technologies for front-end web development.
@@ -19,3 +21,6 @@ A collection of resources, useful tools and technologies for front-end web devel
 * **[Styleguide](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide)** - _The latest and greatest style guide page._
 * **[Accessibility Guidance](https://github.com/devbridge/Front-End-Toolkit/wiki/Accessibility-guidance)** - _Let’s make a Web more accessible._
 * **[Layout Samples](https://github.com/devbridge/Front-End-Toolkit/wiki/Layout-samples)** - _HTML layouts samples_
+
+
+This project is brought you by: [Devbridge Group](https://www.devbridge.com/) 
