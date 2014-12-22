@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 sourceMap: true,
-                noCache:false,
+                noCache: false,
                 spawn: false
             },
             dist: {
@@ -17,15 +17,15 @@ module.exports = function (grunt) {
         sprite: {
             all: {
                 src: 'scss/sprites/icons/*.png',
-                destImg: 'content/styles/images/icons.png',
-                destCSS: 'scss/core/_sprites.scss',
+                dest: 'content/styles/images/icons.png',
+                destCss: 'scss/core/_sprites.scss',
                 imgPath: 'images/icons.png?=' + timestamp,
                 'algorithm': 'binary-tree'
             },
             sprite_2x: {
                 src: 'scss/sprites/icons@2x/*.png',
-                destImg: 'content/styles/images/icons@2x.png',
-                destCSS: 'scss/core/_sprites@2x.scss',
+                dest: 'content/styles/images/icons@2x.png',
+                destCss: 'scss/core/_sprites@2x.scss',
                 imgPath: 'images/icons@2x.png?=' + timestamp,
                 algorithm: 'binary-tree',
                 cssVarMap: function (sprite) {
@@ -44,8 +44,11 @@ module.exports = function (grunt) {
             }
         },
         watch: {
+            options: {
+                spawn: false
+            },
             spriting: {
-                files: ['scss/sprites/icons/*.png', 'scss/sprites/icons@2x/*.png'],
+                files: ['scss/sprites/**/*.png'],
                 tasks: ['sprite']
             },
             css: {

@@ -3,13 +3,10 @@
 
 //Core files
 @import
+    "core/_sprites",
+    "core/_sprites@2x",
     "core/mixins",
     "core/functions";
-
-//Spriting
-@import
-    "core/spriting";
-    $retina-sprite: true;
 
 //Components
 @import

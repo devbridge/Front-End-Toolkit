@@ -22,3 +22,45 @@
     display: $block;
     vertical-align: $align;
 }
+
+@mixin get-sprite($sprite, $sprite2x: false, $center: false, $center-y: false, $center-x: false) {
+    $sprite-half-sprite: 50%;
+    $sprite-icn-height: nth($sprite, 6);
+    $sprite-icn-width: nth($sprite, 5);
+    background: url(nth($sprite, 9)) nth($sprite, 3) nth($sprite, 4) no-repeat;
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+    @content;
+    @if $sprite2x {
+        @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2.0) {
+            background: url(nth($sprite2x, 9)) nth($sprite2x, 3)/2 nth($sprite2x, 4)/2 no-repeat;
+            background-size: nth($sprite2x, 7)/2 nth($sprite2x, 8)/2;
+            @content;
+        }
+    }
+    @if $center {
+        position: absolute;
+        top: $sprite-half-sprite;
+        left: $sprite-half-sprite;
+        margin: {
+            top: -($sprite-icn-height / 2);
+            left: -($sprite-icn-width / 2);
+        }
+    } @else if $center-y {
+        position: absolute;
+        top: $sprite-half-sprite;
+        margin: {
+            top: -($sprite-icn-height / 2);
+        }
+    } @else if $center-x {
+        position: absolute;
+        left: $sprite-half-sprite;
+        margin: {
+            left: -($sprite-icn-width / 2);
+        }
+    }
+}
+
+@mixin sprite-background-size($sprite) {
+    background-size: nth($sprite, 7) nth($sprite, 8);
+}
