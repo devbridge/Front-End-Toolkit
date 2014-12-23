@@ -8,16 +8,16 @@ SCSS variables are information about icon's compiled state, stored under its ori
 The large array-like variables contain all information about a single icon
 $icon-home: x y offset_x offset_y width height total_width total_height image_path;
 */
-$sprite-line-x: 0px;
-$sprite-line-y: 0px;
-$sprite-line-offset-x: 0px;
-$sprite-line-offset-y: 0px;
-$sprite-line-width: 120px;
-$sprite-line-height: 4px;
-$sprite-line-total-width: 120px;
-$sprite-line-total-height: 4px;
-$sprite-line-image: 'images/icons.png?=1418396897995';
-$sprite-line: 0px 0px 0px 0px 120px 4px 120px 4px 'images/icons.png?=1418396897995';
+$icn-arrow-left-x: 0px;
+$icn-arrow-left-y: 0px;
+$icn-arrow-left-offset-x: 0px;
+$icn-arrow-left-offset-y: 0px;
+$icn-arrow-left-width: 29px;
+$icn-arrow-left-height: 67px;
+$icn-arrow-left-total-width: 29px;
+$icn-arrow-left-total-height: 67px;
+$icn-arrow-left-image: 'images/icons.png?=1419285614062';
+$icn-arrow-left: 0px 0px 0px 0px 29px 67px 29px 67px 'images/icons.png?=1419285614062';
 
 /*
 The provided mixins are intended to be used with the array-like variables

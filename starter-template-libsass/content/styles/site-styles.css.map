@@ -4,18 +4,17 @@
 	"sources": [
 		"../../scss/site-styles.scss",
 		"../../scss/components/_extenders.scss",
+		"../../scss/core/_sprites.scss",
+		"../../scss/core/_sprites@2x.scss",
 		"../../scss/core/_mixins.scss",
 		"../../scss/core/_functions.scss",
-		"../../scss/core/_spriting.scss",
 		"../../scss/components/_forms.scss",
 		"../../scss/site/_layout.scss",
 		"../../scss/site/_modules.scss",
 		"../../scss/site/pages/_home.scss",
-		"../../scss/core/_variables.scss",
-		"../../scss/core/_sprites.scss",
-		"../../scss/core/_sprites@2x.scss"
+		"../../scss/core/_variables.scss"
 	],
 	"sourcesContent": [],
-	"mappings": "ACAiB,SAAS;EAElB,OAAO;EACP,SAAS;EACT,SAAS;EACT,QAAQ",
+	"mappings": "ACAiB,SAAS;EAElB,OAAO;EACP,SAAS;EACT,SAAS;EACT,QAAQ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AOLhB;EJ6BI,YAA+B;EDcjC,OAAO;EAIP,QAAQ;ECbF;IIlCR;MJmCY,YAAiC;MACjC,iBAAmC",
 	"names": []
 }
