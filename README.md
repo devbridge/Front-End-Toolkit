@@ -2,14 +2,30 @@
 This project is a collections of resources, best practices and tools for front-end developers. Is made to help unify the workflow and standardize the code inside our team. 
 
 ##Starter Templates##
-To help to save some time creating new project we have created starter templates. 
-We use Sass and Grunt in all our project. Depending on technologies used in the project you have two templates to choose from:
+We have created starter templates for front-end development to ease setup process.
+Depending on technologies used in the project you have two templates to choose from:
 
-####Compass Starter Template####
-This template uses Compass to compile `.scss` files and Grunt to watch `/styleguide` folder. More about styleguide [here](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide). 
+#####Compass Starter Template#####
+This is our default template. It uses Compass to compile `.scss` files and Grunt to watch `/styleguide` folder for changes (more about styleguide [here](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide)).
 
-####Libsass Starter Template####
-Lorem ipsum. 
+Compass starter template includes:
+* Javascript files structure including:
+    * [require.js](http://requirejs.org/)
+    * [jquery.modal.js](https://www.devbridge.com/sourcery/components/jquery-modal/)
+    * [slick.js](http://kenwheeler.github.io/slick/)
+    * [jquery.validate](http://jqueryvalidation.org/)
+* Sass file structure
+* CSS normalizer
+* Image sprites
+* Default styles for:
+    * Form elements
+    * Modal window
+    * Table elements
+* Styleguide component.
+
+
+#####Libsass Starter Template#####
+Libsass starter template structure is identical to Compass template, the only different - Grunt tasks made to compile `.scss` file with Libsass.
 
 
 ##Wiki##
