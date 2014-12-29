@@ -1,6 +1,7 @@
-# **Libsass Starter Template** #
+# **Compass Starter Template** #
+This is our default template. It uses Compass to compile `.scss` files and Grunt to watch `/styleguide` folder for changes (more about styleguide [here](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide)).
 
-Libsass starter template includes:
+Compass starter template includes:
 * Javascript files structure including:
     * [require.js](http://requirejs.org/)
     * [jquery.modal.js](https://www.devbridge.com/sourcery/components/jquery-modal/)
