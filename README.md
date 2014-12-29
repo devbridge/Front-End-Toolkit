@@ -5,7 +5,7 @@ This project is a collections of resources, best practices and tools for front-e
 We have created starter templates for front-end development to ease setup process.
 Depending on technologies used in the project you have two templates to choose from:
 
-#####Compass Starter Template#####
+####Compass Starter Template####
 This is our default template. It uses Compass to compile `.scss` files and Grunt to watch `/styleguide` folder for changes (more about styleguide [here](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide)).
 
 Compass starter template includes:
@@ -24,7 +24,7 @@ Compass starter template includes:
 * Styleguide component.
 
 
-#####Libsass Starter Template#####
+####Libsass Starter Template####
 Libsass starter template structure is identical to Compass template, the only different - Grunt tasks made to compile `.scss` file with Libsass.
 
 
