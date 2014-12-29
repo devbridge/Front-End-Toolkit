@@ -21,12 +21,15 @@ Compass starter template includes:
     * Form elements
     * Modal window
     * Table elements
-* Styleguide component.
+* Styleguide component
 
 
 ####Libsass Starter Template####
 Libsass starter template structure is identical to Compass template, the only different - Grunt tasks made to compile `.scss` file with Libsass.
-
+Libsass template have following Grunt tasks:
+    * sass - to compile `.scss` files
+    * sprite - to generate sprite images
+    * watch - to watch for files changes
 
 ##Wiki##
 A collection of resources, useful tools and technologies for front-end web development.

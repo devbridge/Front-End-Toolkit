@@ -14,7 +14,7 @@ Compass starter template includes:
     * Form elements
     * Modal window
     * Table elements
-* Styleguide component.
+* Styleguide component
 
 
 # **Front-End Toolkit** #

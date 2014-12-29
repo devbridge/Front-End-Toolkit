@@ -13,7 +13,11 @@ Libsass starter template includes:
     * Form elements
     * Modal window
     * Table elements
-* Styleguide component.
+* Styleguide component
+* Grunt tasks:
+    * sass - to compile `.scss` files
+    * sprite - to generate sprite images
+    * watch - to watch for files changes
 
 
 # **Front-End Toolkit** #
