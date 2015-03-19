@@ -22,15 +22,14 @@ To ease setup process of the new project we have created a starter template whic
     * grunt-sprite - [npmjs.com/package/grunt-spritesmith](https://www.npmjs.com/package/grunt-spritesmith)
     * grunt-folder_list - [npmjs.com/package/grunt-folder-list](https://www.npmjs.com/package/grunt-folder-list)
 
+
 To install template:
-* copy files to your project directory
-* in the command line navigate to your project directory and run `npm install`
-*
 
+* Copy files to your project directory
+* In the command line navigate to your project directory and run `npm install`.
+* Run Grunt task `watch`.
 
-We use npm package manager.
-
-
+_Note: we use [npm package manager](https://www.npmjs.com/) to manage our modules and [Grunt](http://gruntjs.com/) to run automated tasks. Also, to use npm manager you must have [Node.js](https://nodejs.org/) installer on your machine._
 
 ##Wiki##
 A collection of resources, useful tools and technologies for front-end web development.
