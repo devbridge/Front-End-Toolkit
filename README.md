@@ -1,36 +1,36 @@
 # **Front-End Toolkit** #
-This project is a collections of resources, best practices and tools for front-end developers. Is made to help unify the workflow and standardize the code inside our team. 
+This project is a collections of resources, best practices and tools for front-end developers. Is made to help unify workflow and standardize the code inside our team.
 
-##Starter Templates##
-We have created starter templates for front-end development to ease setup process.
-Depending on technologies used in the project you have two templates to choose from:
+##Starter Template##
+To ease setup process of the new project we have created a starter template which contains:
 
-####Compass Starter Template####
-This is our default template. It uses Compass to compile `.scss` files and Grunt to watch `/styleguide` folder for changes (more about styleguide [here](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide)).
+* Javascript files structure including following plugins:
+    * JS loader - [require.js](http://requirejs.org/)
+    * Modal window - [jquery.modal.js](https://www.devbridge.com/sourcery/components/jquery-modal/)
+    * Slider - [slick.js](http://kenwheeler.github.io/slick/)
+    * Form validation - [jquery.validate](http://jqueryvalidation.org/)
+* Sass files structure including following components:
+    * Image sprites
+    * CSS normalizer
+    * Default styles for:
+        * Form elements
+        * Modal window
+        * Table elements
+* Automated Grunt tasks:
+    * grunt-contrib-watch - [npmjs.com/package/grunt-contrib-watch](https://www.npmjs.com/package/grunt-contrib-watch)
+    * grunt-sass - [npmjs.com/package/grunt-sass](https://www.npmjs.com/package/grunt-sass)
+    * grunt-sprite - [npmjs.com/package/grunt-spritesmith](https://www.npmjs.com/package/grunt-spritesmith)
+    * grunt-folder_list - [npmjs.com/package/grunt-folder-list](https://www.npmjs.com/package/grunt-folder-list)
 
-Compass starter template includes:
-* Javascript files structure including:
-    * [require.js](http://requirejs.org/)
-    * [jquery.modal.js](https://www.devbridge.com/sourcery/components/jquery-modal/)
-    * [slick.js](http://kenwheeler.github.io/slick/)
-    * [jquery.validate](http://jqueryvalidation.org/)
-* Sass file structure
-* CSS normalizer
-* Image sprites
-* Default styles for:
-    * Form elements
-    * Modal window
-    * Table elements
-* Styleguide component
+To install template:
+* copy files to your project directory
+* in the command line navigate to your project directory and run `npm install`
+*
 
 
-####Libsass Starter Template####
-Libsass starter template structure is identical to Compass template, the only different - Grunt tasks made to compile `.scss` file with Libsass.
+We use npm package manager.
 
-Libsass template have following Grunt tasks:
- * sass - to compile `.scss` files
- * sprite - to generate sprite images
- * watch - to watch for files changes
+
 
 ##Wiki##
 A collection of resources, useful tools and technologies for front-end web development.
