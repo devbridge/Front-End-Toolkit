@@ -1,9 +1,8 @@
 .clearfix:after {
-    clear: both;
-    content: '';
-    display: table;
-    height: 0;
-}
+  clear: both;
+  content: '';
+  display: table;
+  height: 0; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
@@ -48,16 +47,13 @@ The provided mixins are intended to be used with the array-like variables
 }
 */
 .icn-arrow {
-    background: url('images/icons.png?=1419285614062') 0px 0px no-repeat;
-    width: 29px;
-    height: 67px;
-}
-
-@media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+  display: block;
+  background: url('images/icons.png?=1419285614062') 0px 0px no-repeat;
+  width: 29px;
+  height: 67px; }
+  @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
     .icn-arrow {
-        background: url('images/icons@2x.png?=1419285614062') 0px 0px no-repeat;
-        background-size: 58px 67px;
-    }
-}
+      background: url('images/icons@2x.png?=1419285614062') 0px 0px no-repeat;
+      background-size: 58px 67px; } }
 
 /*# sourceMappingURL=site-styles.css.map */

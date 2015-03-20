@@ -3,7 +3,7 @@
 /*jslint regexp: true, nomen: true, sloppy: true */
 /*global require, define, alert, applicationConfig, location, document, window,  setTimeout, Countable */
 
-define(['jquery'], function ($) {
+define(['jquery', 'slickSlider'], function ($) {
 
     var module = {};
 

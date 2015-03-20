@@ -20,7 +20,7 @@ module.exports = function (grunt) {
                 dest: 'content/styles/images/icons.png',
                 destCss: 'scss/core/_sprites.scss',
                 imgPath: 'images/icons.png?=' + timestamp,
-                'algorithm': 'binary-tree'
+                algorithm: 'binary-tree'
             },
             sprite_2x: {
                 src: 'scss/sprites/icons@2x/*.png',
@@ -28,6 +28,7 @@ module.exports = function (grunt) {
                 destCss: 'scss/core/_sprites@2x.scss',
                 imgPath: 'images/icons@2x.png?=' + timestamp,
                 algorithm: 'binary-tree',
+                padding: 4,
                 cssVarMap: function (sprite) {
                     sprite.name = sprite.name + '-retina';
                 }
@@ -48,8 +49,8 @@ module.exports = function (grunt) {
                 spawn: false
             },
             spriting: {
-                files: ['scss/sprites/**/*.png'],
-                tasks: ['sprite']
+                files: ['scss/sprites/icons/*.png', 'scss/sprites/icons@2x/*.png'],
+                tasks: ['sprite:all', 'sprite:sprite_2x']
             },
             css: {
                 files: 'scss/**/*.scss',
@@ -58,6 +59,9 @@ module.exports = function (grunt) {
             styleguide: {
                 files: ['styleguide/snippets/*'],
                 tasks: ['folder_list']
+            },
+            grunt: {
+                files: ['Gruntfile.js']
             }
         }
     });

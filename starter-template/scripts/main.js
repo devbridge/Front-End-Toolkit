@@ -1,20 +1,21 @@
 ﻿/*jslint regexp: true, nomen: true, sloppy: true */
 /*global require, applicationConfig, window, applicationConfig */
 require.config({
-    baseUrl: '/',
+    baseUrl: 'scripts/',
     paths: {
-        jquery: '/scripts/libs/jquery-1.8.3.min',
-        site: '/scripts/modules/site',
-        validation: '/scripts/plugins/jquery.validate'
+        jquery: [
+            '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min', // cdn
+            '/libs/jquery-1.8.3.min' // fallback
+        ],
+        validation: 'plugins/jquery.validate',
+        slickSlider: [
+            '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min',
+            'plugins/slick.min'
+        ],
+        site: 'modules/site'
     },
     shim: {
-        site: {
-            deps: ['jquery']
-        },
         validation: {
-            deps: ['jquery']
-        },
-        browserCompatability: {
             deps: ['jquery']
         }
     }
