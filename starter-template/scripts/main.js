@@ -12,6 +12,7 @@ require.config({
             '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min',
             'plugins/slick.min'
         ],
+        modal: 'plugins/jquery.modal',
         site: 'modules/site'
     },
     shim: {
