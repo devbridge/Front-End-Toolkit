@@ -6,7 +6,7 @@
 define(['jquery', 'slickSlider', 'modal'], function ($) {
 
     var module = {};
-    
+
     // Context is passed to modules. If you will pass it, module will bind to
     // exact area in DOM, if not it will bind on every selector
 
@@ -18,6 +18,8 @@ define(['jquery', 'slickSlider', 'modal'], function ($) {
     module.prototypeValidation = function (context) {
         // Description: Module will bind jquery.validate to each form
         // and will mirror validation unobtrusive behavior.
+        // -----------------------------------------------------------------------------------------------
+        // http://jqueryvalidation.org/category/methods/
         var validationMessage = $('<span class="field-validation-error"></span>');
         $('form', context).each(function () {
             $(this).validate({
