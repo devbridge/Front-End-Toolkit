@@ -4,7 +4,6 @@
 /*global require, define, alert, applicationConfig, location, document, window,  setTimeout, Countable */
 
 define(['jquery', 'slickSlider', 'modal'], function ($) {
-
     var module = {};
 
     // Context is passed to modules. If you will pass it, module will bind to
@@ -72,8 +71,11 @@ define(['jquery', 'slickSlider', 'modal'], function ($) {
 
     module.init = function () {
         module.sample();
+        // uncomment these default modules or remove them
+        /*
         module.modal();
         module.prototypeValidation();
+        */
     };
 
     return module;
