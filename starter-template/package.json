@@ -9,6 +9,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "*",
+    "gulp-plumber": "^1.0.0",
     "gulp-sass": "^1.3.3",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-svg-sprite": "^1.1.1",

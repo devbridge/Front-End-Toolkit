@@ -14,7 +14,7 @@ module.exports = function() {
         sourceComments: false
     };
 
-    return gulp.src( config.scss.scssFolder + '*.scss')
+    return gulp.src( config.scss.scssFolder + '**/*.scss')
         .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err);
