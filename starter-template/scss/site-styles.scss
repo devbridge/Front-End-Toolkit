@@ -1,24 +1,26 @@
 //Extenders
-@import "components/extenders";
+@import 'components/extenders';
+
+
 
 //Core files
 @import
-    "core/_sprites",
-    "core/_sprites@2x",
-    "core/mixins",
-    "core/functions";
+    'core/sprites',
+    'core/sprites@2x',
+    'core/mixins',
+    'core/functions';
 
 //Components
-@import
-    //"components/normalize",
-    //"components/plugins/slick",
-    //"components/slider",
-    "components/modal",
-    //"components/tables",
-    "components/forms";
+//@import
+    //'components/normalize',
+    //'components/plugins/slick',
+    //'components/slider',
+    //'components/modal',
+    //'components/tables',
+    //'components/forms';
 
 //Project styles
 @import
-    "site/layout",
-    "site/modules",
-    "site/pages/home";
+    'site/layout',
+    'site/modules',
+    'site/pages/home';

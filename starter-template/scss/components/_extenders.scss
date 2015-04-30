@@ -1,18 +1,18 @@
-@mixin clearfix {
-    &:after {
-        clear: both;
-        content: '';
-        display: table;
-        height: 0;
+@mixin clearfix($extend: true) {
+    @if $extend {
+        @extend %clearfix;
+    }
+    @else {
+        &:after {
+            content: ‘’;
+            display: table;
+            clear: both;
+        }
     }
 }
 
 %clearfix {
-    @include clearfix;
-}
-
-.clearfix {
-    @extend %clearfix;
+    @include clearfix($extend: false);
 }
 
 @mixin box-sizing {
