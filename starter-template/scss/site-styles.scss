@@ -2,29 +2,28 @@
 // @import "neat";
 
 // Extenders
-@import "components/extenders";
+@import
+	'components/extenders';
 
 // Core files
 @import
-    //"core/_sprites",
-    //"core/_sprites@2x",
-    "core/mixins",
-    "core/functions",
-    "core/svg-sprite";
+    //'core/sprites',
+    //'core/sprites@2x',
+    'core/mixins',
+    'core/functions',
+    'core/svg-sprite';
 
 // Components
 //@import
-    //"components/normalize",
-    //"components/plugins/slick",
-    //"components/slider",
-    //"components/tables",
-    //"components/forms",
-    //"components/modal";
+	//'components/normalize',
+	//'components/plugins/slick',
+	//'components/slider',
+	//'components/tables',
+	//'components/forms',
+	//'components/modal';
 
 // Project styles
 @import
-    "site/layout",
-    "site/modules",
-    "site/pages/home";
-
-
+	'site/layout',
+	'site/modules',
+	'site/pages/home';
