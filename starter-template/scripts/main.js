@@ -1,7 +1,7 @@
 ﻿/*jslint regexp: true, nomen: true, sloppy: true */
 /*global require, applicationConfig, window, applicationConfig */
 require.config({
-    baseUrl: 'scripts/',
+    baseUrl: '/scripts/',
     paths: {
         jquery: [
             '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min', // cdn
