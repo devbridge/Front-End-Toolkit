@@ -58,14 +58,18 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
+@media screen and (max-width: 1024px) {
+  body {
+    -webkit-text-size-adjust: 100%; } }
+
 .icn-arrow {
   display: block;
-  background: url('images/icons.png?=1424167789332') 0px 0px no-repeat;
+  background: url("images/icons.png?=1432884544047") 0px 0px no-repeat;
   width: 29px;
   height: 67px; }
   @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
     .icn-arrow {
-      background: url('images/icons@2x.png?=1424167789332') 0px 0px no-repeat;
-      background-size: 58px 67px; } }
+      background: url("images/icons@2x.png?=1432884544047") 0px 0px no-repeat;
+      background-size: 29px 67px; } }
 
 /*# sourceMappingURL=site-styles.css.map */
