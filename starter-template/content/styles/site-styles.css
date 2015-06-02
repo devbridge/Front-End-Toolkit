@@ -72,4 +72,10 @@ The `sprites` mixin generates identical output to the CSS template
       background: url("images/icons@2x.png?=1432884544047") 0px 0px no-repeat;
       background-size: 29px 67px; } }
 
+.noscript-message {
+  background: #fff1bb;
+  padding: 3px;
+  text-align: center;
+  font-size: 16px; }
+
 /*# sourceMappingURL=site-styles.css.map */

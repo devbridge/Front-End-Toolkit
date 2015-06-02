@@ -2,3 +2,10 @@
     display:block;
     @include get-sprite($icn-arrow-left, $icn-arrow-left-retina);
 }
+
+.noscript-message {
+    background: #fff1bb;
+    padding: 3px;
+    text-align: center;
+    font-size: 16px;
+}
