@@ -76,6 +76,7 @@ The `sprites` mixin generates identical output to the CSS template
   background: #fff1bb;
   padding: 3px;
   text-align: center;
-  font-size: 16px; }
+  font-size: 16px;
+  z-index: 2147483647; }
 
 /*# sourceMappingURL=site-styles.css.map */
