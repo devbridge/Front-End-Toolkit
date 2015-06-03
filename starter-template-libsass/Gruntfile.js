@@ -1,7 +1,39 @@
+/*
+    Grunt installation:
+    -------------------
+    Requirements:
+    NodeJs 0.12 or higher
+    Download link: https://nodejs.org/download/
+    -------------------
+
+    Open command line and type:
+    -------------------
+    npm install -g grunt-cli
+    npm install -g grunt-init
+
+    Dependency Install:
+    --------------------------
+    npm install (from the same root directory as the `package.json` file
+
+    Tasks:
+    --------------------------
+    grunt (compiles sass, sprites, forms list of documents required for styleguide)
+    grunt sass (compiles sass once)
+    grunt watch (you can also explicitly call the watch task)
+
+    All commands are detailed by running the following:
+    --------------------------
+    grunt --help
+*/
+
 module.exports = function (grunt) {
 
     var timestamp = Date.now();
+
+    // CONFIG ===================================/
     grunt.initConfig({
+
+        // configure sass --> grunt sass
         sass: {
             options: {
                 sourceMap: true,
@@ -14,6 +46,8 @@ module.exports = function (grunt) {
                 }
             }
         },
+
+        // configure sprite --> grunt sprite
         sprite: {
             all: {
                 src: 'scss/sprites/icons/*.png',
@@ -33,6 +67,8 @@ module.exports = function (grunt) {
                 }
             }
         },
+
+        // configure folder_list --> grunt folder_list
         folder_list: {
             options: {
                 files: true,
@@ -43,6 +79,8 @@ module.exports = function (grunt) {
                 dest: 'styleguide/scripts/snippets.txt'
             }
         },
+
+        // configure file watching --> grunt watch
         watch: {
             options: {
                 spawn: false
@@ -61,9 +99,13 @@ module.exports = function (grunt) {
             }
         }
     });
+
+    // DEPENDENT PLUGINS =========================/
     grunt.loadNpmTasks('grunt-spritesmith');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-folder-list');
+
+    // TASKS =====================================/
     grunt.registerTask('default', ['sprite:all', 'sprite:sprite_2x', 'sass', 'folder_list']);
 };

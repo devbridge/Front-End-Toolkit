@@ -7,14 +7,13 @@
     },
     "description": "Libsass boilerplate with sprite building",
     "main": "Gruntfile.js",
-    "dependencies": {
-        "grunt": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-sass": "*",
-        "grunt-spritesmith": "*",
-        "grunt-folder-list": "*"
+    "devDependencies": {
+      "grunt": "*",
+      "grunt-contrib-watch": "*",
+      "grunt-sass": "*",
+      "grunt-spritesmith": "*",
+      "grunt-folder-list": "*"
     },
-    "devDependencies": {},
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

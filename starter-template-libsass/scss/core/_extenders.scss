@@ -11,10 +11,6 @@
     @include clearfix;
 }
 
-.clearfix {
-    @extend %clearfix;
-}
-
 @mixin box-sizing {
     -moz-box-sizing: border-box;
     box-sizing: border-box;

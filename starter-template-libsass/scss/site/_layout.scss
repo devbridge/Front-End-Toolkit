@@ -1,0 +1,10 @@
+//
+// Layout Rules
+//
+// Layout styles can also be divided into major and minor styles based on
+// reuse. Fox example, major layout styles can be dedicated for header and/or footer.
+
+
+.clearfix {
+    @extend %clearfix;
+}
