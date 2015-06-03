@@ -15,7 +15,6 @@ module.exports = function (grunt) {
             }
         },
         sprite: {
-            
             all: {
                 src: 'scss/sprites/icons/*.png',
                 dest: 'content/styles/images/icons.png',
