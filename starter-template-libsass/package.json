@@ -1,22 +1,35 @@
 {
-    "name": "Devbridge-FrontEnd",
-    "version": "1.0.0",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/devbridge/Front-End-Toolkit.git"
-    },
-    "description": "Libsass boilerplate with sprite building",
-    "main": "Gruntfile.js",
-    "devDependencies": {
-      "grunt": "*",
-      "grunt-contrib-watch": "*",
-      "grunt-sass": "*",
-      "grunt-spritesmith": "*",
-      "grunt-folder-list": "*"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "Devbridge-FrontEnd",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/devbridge/Front-End-Toolkit.git"
+  },
+  "description": "Libsass boilerplate with sprite building",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-folder-list": "^1.1.0",
+    "grunt-sass": "^1.0.0",
+    "grunt-spritesmith": "^4.7.1",
+    "node-bourbon": "^4.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devbridge/Front-End-Toolkit/issues"
+  },
+  "homepage": "https://github.com/devbridge/Front-End-Toolkit",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-folder-list": "^1.1.0",
+    "grunt-sass": "^1.0.0",
+    "grunt-spritesmith": "^4.7.1",
+    "node-bourbon": "^4.2.3"
+  }
 }

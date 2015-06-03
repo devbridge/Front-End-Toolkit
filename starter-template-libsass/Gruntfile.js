@@ -38,7 +38,8 @@ module.exports = function (grunt) {
             options: {
                 sourceMap: true,
                 noCache: false,
-                spawn: false
+                spawn: false,
+                includePaths: require('node-bourbon').includePaths
             },
             dist: {
                 files: {

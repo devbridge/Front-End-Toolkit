@@ -215,6 +215,12 @@ body {
     body {
       -webkit-text-size-adjust: 100%; } }
 
+::-moz-selection {
+  background-color: #ffbb52; }
+
+::selection {
+  background-color: #ffbb52; }
+
 .icn-arrow {
   display: block;
   background: url("images/icons.png?=1419285614062") 0px 0px no-repeat;
