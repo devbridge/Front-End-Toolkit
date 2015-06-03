@@ -201,6 +201,20 @@ The provided mixins are intended to be used with the array-like variables
   @include sprite($icon-email);
 }
 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+body {
+  font-size: 16px;
+  line-height: 1.5; }
+  @media screen and (max-width: 1024px) {
+    body {
+      -webkit-text-size-adjust: 100%; } }
+
 .icn-arrow {
   display: block;
   background: url("images/icons.png?=1419285614062") 0px 0px no-repeat;

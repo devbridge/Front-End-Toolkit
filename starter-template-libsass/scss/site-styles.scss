@@ -18,7 +18,8 @@
 // ==========================================================================
 // Core
 // ==========================================================================
-@import "core/normalize",
+@import "core/variables",
+        "core/normalize",
         "core/mixins",
         "core/functions",
         "core/extenders",
