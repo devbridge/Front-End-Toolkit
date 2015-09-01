@@ -14,7 +14,6 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-svg-sprite": "^1.1.1",
     "gulp-svg2png": "^0.3.0",
-    "gulp-svgo": "^0.1.1",
     "node-bourbon": "^4.2.1-beta1",
     "node-neat": "^1.7.1-beta1"
   },
