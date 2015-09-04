@@ -1,0 +1,29 @@
+// @import "bourbon";
+// @import "neat";
+
+// Extenders
+@import
+	'components/extenders';
+
+// Core files
+@import
+    //'core/sprites',
+    //'core/sprites@2x',
+    'core/mixins',
+    'core/functions',
+    'core/svg-sprite';
+
+// Components
+//@import
+	//'components/normalize',
+	//'components/plugins/slick',
+	//'components/slider',
+	//'components/tables',
+	//'components/forms',
+	//'components/modal';
+
+// Project styles
+@import
+	'site/layout',
+	'site/modules',
+	'site/pages/home';

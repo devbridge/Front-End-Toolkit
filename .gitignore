@@ -5,6 +5,7 @@
 
 /starter-template-libsass/.idea
 /starter-template-libsass/node_modules
+/npm-debug.log
 # Created by https://www.gitignore.io
 
 ### Windows ###
@@ -449,4 +450,3 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
-

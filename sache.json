@@ -1,0 +1,5 @@
+{
+  "name": "Front-End-Toolkit",
+  "description": "This project is a collections of resources, best practices and tools for front-end developers. Is made to help unify workflow and standardize the code inside our team.",
+  "tags": ["boilerplate", "sass", "spriting", "libsass", "template", "architecture", "ui", "front-end", "bourbon", "grunt", "libsass template"]
+}

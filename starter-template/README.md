@@ -40,7 +40,6 @@ A collection of resources, useful tools and technologies for front-end web devel
 * **[Styleguide](https://github.com/devbridge/Front-End-Toolkit/wiki/Styleguide)** - _The latest and greatest style guide page._
 * **[Accessibility Guidance](https://github.com/devbridge/Front-End-Toolkit/wiki/Accessibility-guidance)** - _Let’s make a Web more accessible._
 * **[Layout Samples](https://github.com/devbridge/Front-End-Toolkit/wiki/Layout-samples)** - _HTML layouts samples_
-* **[Resources](https://github.com/devbridge/Front-End-Toolkit/wiki/Front-end-resources-list)** - _Hand picked resources for Front-end developer_
 
 
 This project is brought you by: [Devbridge Group](https://www.devbridge.com/) 
