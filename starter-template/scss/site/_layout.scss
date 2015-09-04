@@ -1,0 +1,6 @@
+body {
+    //To prevent the iPhone and iPad from inflating fonts
+    @include respond-to(1024, max) {
+        -webkit-text-size-adjust: 100%;
+    }
+}

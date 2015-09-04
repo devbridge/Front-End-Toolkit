@@ -20,13 +20,13 @@ $icn-arrow-left-width: 29px;
 $icn-arrow-left-height: 67px;
 $icn-arrow-left-total-width: 29px;
 $icn-arrow-left-total-height: 67px;
-$icn-arrow-left-image: 'images/icons.png?=1424167789332';
-$icn-arrow-left: 0px 0px 0px 0px 29px 67px 29px 67px 'images/icons.png?=1424167789332' 'icn-arrow-left';
+$icn-arrow-left-image: 'images/icons.png?=1432884544047';
+$icn-arrow-left: (0px, 0px, 0px, 0px, 29px, 67px, 29px, 67px, 'images/icons.png?=1432884544047', 'icn-arrow-left', );
 $spritesheet-width: 29px;
 $spritesheet-height: 67px;
-$spritesheet-image: 'images/icons.png?=1424167789332';
-$spritesheet-sprites: $icn-arrow-left;
-$spritesheet: 29px 67px 'images/icons.png?=1424167789332' $spritesheet-sprites;
+$spritesheet-image: 'images/icons.png?=1432884544047';
+$spritesheet-sprites: ($icn-arrow-left, );
+$spritesheet: (29px, 67px, 'images/icons.png?=1432884544047', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables
