@@ -1,4 +1,7 @@
-//Correct `block` display not defined for any HTML5 element in IE 8/9.
+// Correct `block` display not defined for any HTML5 element in IE 8/9.
+// Correct `block` display not defined for `details` or `summary` in IE 10/11
+// and Firefox.
+// Correct `block` display not defined for `main` in IE 11.
 article,
 aside,
 figcaption,
@@ -18,56 +21,56 @@ audio,
 canvas,
 progress,
 video {
-    display: inline-block; // 1.
-    vertical-align: baseline; // 2.
+    display: inline-block; // 1
+    vertical-align: baseline; // 2
 }
 
-//Prevent modern browsers from displaying `audio` without controls.
-//Remove excess height in iOS 5 devices.
+// Prevent modern browsers from displaying `audio` without controls.
+// Remove excess height in iOS 5 devices.
 audio:not([controls]) {
     display: none;
     height: 0;
 }
 
-//Remove the gray background color from active links in IE 10.
+// Remove the gray background color from active links in IE 10.
 a {
     background-color: transparent;
 }
 
-//Improve readability when focused and also mouse hovered in all browsers.
+// Improve readability when focused and also mouse hovered in all browsers.
 a:active,
 a:hover {
     outline: 0;
 }
 
-//Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+// Address styling not present in IE 8/9/10/11, Safari, and Chrome.
 abbr[title] {
     border-bottom: 1px dotted;
 }
 
-//Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+// Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
 b,
 strong {
     font-weight: bold;
 }
 
-//Address styling not present in Safari and Chrome.
+// Address styling not present in Safari and Chrome.
 dfn {
     font-style: italic;
 }
 
-//Address styling not present in IE 8/9.
+// Address styling not present in IE 8/9.
 mark {
     background: #ff0;
     color: #000;
 }
 
-//Address inconsistent and variable font size in all browsers.
+// Address inconsistent and variable font size in all browsers.
 small {
     font-size: 80%;
 }
 
-//Prevent `sub` and `sup` affecting `line-height` in all browsers.
+// Prevent `sub` and `sup` affecting `line-height` in all browsers.
 sub,
 sup {
     font-size: 75%;
@@ -84,34 +87,33 @@ sub {
     bottom: -.25em;
 }
 
-//Remove border when inside `a` element in IE 8/9/10.
+// Remove border when inside `a` element in IE 8/9/10.
 img {
     border: 0;
 }
 
-//Correct overflow not hidden in IE 9/10/11.
+// Correct overflow not hidden in IE 9/10/11.
 svg:not(:root) {
     overflow: hidden;
 }
 
-//Address margin not present in IE 8/9 and Safari.
+// Address margin not present in IE 8/9 and Safari.
 figure {
     margin: 1em 40px;
 }
 
-//Address differences between Firefox and other browsers.
+// Address differences between Firefox and other browsers.
 hr {
-    -moz-box-sizing: content-box;
     box-sizing: content-box;
     height: 0;
 }
 
-//Contain overflow in all browsers.
+// Contain overflow in all browsers.
 pre {
     overflow: auto;
 }
 
-//Address odd `em`-unit font size rendering in all browsers.
+// Address odd `em`-unit font size rendering in all browsers.
 code,
 kbd,
 pre,
@@ -158,26 +160,27 @@ input[type="submit"] {
     cursor: pointer; // 3
 }
 
-//Re-set default cursor for disabled elements.
+// Re-set default cursor for disabled elements.
 button[disabled],
 html input[disabled] {
     cursor: default;
 }
 
-//Remove inner padding and border in Firefox 4+.
+// Remove inner padding and border in Firefox 4+.
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
 
-//Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
+// Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
 input {
     line-height: normal;
 }
 
-// It's recommended that you don't attempt to style these elements. Firefox's implementation doesn't respect box-sizing, padding, or width.
-//  1. Address box sizing set to `content-box` in IE 8/9/10.
+// It's recommended that you don't attempt to style these elements.
+// Firefox's implementation doesn't respect box-sizing, padding, or width.
+// 1. Address box sizing set to `content-box` in IE 8/9/10.
 // 2. Remove excess padding in IE 8/9/10.
 input[type="checkbox"],
 input[type="radio"] {
@@ -192,12 +195,10 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 // 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-// 2. Address `box-sizing` set to `border-box` in Safari and Chrome(include `-moz` to future-proof).
+// 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
 input[type="search"] {
     -webkit-appearance: textfield; // 1
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; // 2
-    box-sizing: content-box;
+    box-sizing: content-box; // 2
 }
 
 // Remove inner padding and search cancel button in Safari and Chrome on OS X.

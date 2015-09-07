@@ -47,15 +47,15 @@
 }
 
 .modal-title {
-    @include box-sizing;
     background: #fff;
+    box-sizing: border-box;
     font-weight: 700;
     padding: 20px;
 }
 
 .modal-content {
-    @include box-sizing;
     background: #fff;
+    box-sizing: border-box;
     padding: 20px;
 }
 

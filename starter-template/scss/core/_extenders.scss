@@ -1,14 +1,19 @@
-@mixin clearfix {
-    &:after {
-        clear: both;
-        content: '';
-        display: table;
-        height: 0;
+@mixin clearfix($extend: true) {
+    @if $extend {
+        @extend %clearfix;
+    }
+    @else {
+        &:after {
+            clear: both;
+            content: '';
+            display: table;
+            height: 0;
+        }
     }
 }
 
 %clearfix {
-    @include clearfix;
+    @include clearfix($extend: false);
 }
 
 %hidden {
@@ -38,13 +43,4 @@
         position: static;
         width: auto;
     }
-}
-
-@mixin box-sizing {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-%box-sizing {
-    @include box-sizing;
 }

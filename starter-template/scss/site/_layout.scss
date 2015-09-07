@@ -45,5 +45,5 @@ a {
 // Clearfix
 // ==========================================================================
 .clearfix {
-    @extend %clearfix;
+    @include clearfix($extend: true)
 }
