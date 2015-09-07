@@ -1,8 +1,7 @@
 @mixin clearfix($extend: true) {
     @if $extend {
         @extend %clearfix;
-    }
-    @else {
+    } @else {
         &:after {
             clear: both;
             content: '';

@@ -93,9 +93,10 @@ img {
 }
 
 // Correct overflow not hidden in IE 9/10/11.
-svg:not(:root) {
-    overflow: hidden;
-}
+// Enable if you don't use <use ..>
+//svg:not(:root) {
+//    overflow: hidden;
+//}
 
 // Address margin not present in IE 8/9 and Safari.
 figure {
