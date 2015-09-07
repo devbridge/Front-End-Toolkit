@@ -4,12 +4,15 @@ require.config({
     baseUrl: '/scripts/',
     paths: {
         jquery: [
-            '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min', // cdn
-            '/libs/jquery-1.8.3.min' // fallback
+            '//cdn.jsdelivr.net/jquery/1.8.3/jquery-1.8.3.min',
+            '/libs/jquery-1.8.3.min'
         ],
-        validation: 'plugins/jquery.validate',
+        validation: [
+            '//cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min',
+            'plugins/jquery.validate.min'
+        ],
         slickSlider: [
-            '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min',
+            '//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min',
             'plugins/slick.min'
         ],
         modal: 'plugins/jquery.modal',

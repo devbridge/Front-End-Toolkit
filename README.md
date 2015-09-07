@@ -16,20 +16,19 @@ To ease setup process of the new project we have created a starter template whic
         * Form elements
         * Modal window
         * Table elements
-* Automated Grunt tasks:
-    * grunt-contrib-watch - [npmjs.com/package/grunt-contrib-watch](https://www.npmjs.com/package/grunt-contrib-watch)
-    * grunt-sass - [npmjs.com/package/grunt-sass](https://www.npmjs.com/package/grunt-sass)
-    * grunt-sprite - [npmjs.com/package/grunt-spritesmith](https://www.npmjs.com/package/grunt-spritesmith)
-    * grunt-folder_list - [npmjs.com/package/grunt-folder-list](https://www.npmjs.com/package/grunt-folder-list)
+* Automated Gulp tasks:
+    * gulp-sass - [npmjs.com/package/gulp-sass](https://www.npmjs.com/package/gulp-sass)
+    * gulp-svg-sprite - [npmjs.com/package/gulp-svg-sprite](https://www.npmjs.com/package/gulp-svg-sprite)
+    * gulp-svg2png - [npmjs.com/package/gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png)
 
 
 To install template:
 
 * Copy files to your project directory
 * In the command line navigate to your project directory and run `npm install`.
-* Run Grunt task `watch`.
+* Run Gulp task `watch-all`.
 
-_Note: we use [npm package manager](https://www.npmjs.com/) to manage our modules and [Grunt](http://gruntjs.com/) to run automated tasks. Also, to use npm manager you must have [Node.js](https://nodejs.org/) installer on your machine._
+_Note: we use [npm package manager](https://www.npmjs.com/) to manage our modules and [Gulp](http://gulpjs.com/) to run automated tasks. Also, to use npm manager you must have [Node.js](https://nodejs.org/) installer on your machine._
 
 ##Wiki##
 A collection of resources, useful tools and technologies for front-end web development.

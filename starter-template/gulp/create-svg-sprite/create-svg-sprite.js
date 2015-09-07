@@ -8,7 +8,7 @@ module.exports = function(){
 
     if(config.svg.pngFallback){
         gulp.start('png-sprite')
-    }else{
+    } else {
         gulp.start('svg-sprite')
     }
 

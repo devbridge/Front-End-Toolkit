@@ -13,7 +13,7 @@ $ieSprite: '.ie8' !default;
 
 $sprite: map-get($icons, sprite) !default;
 
-// Retrive an attributes value for a specific icon in the sprite map
+// Retrieve an attributes value for a specific icon in the sprite map
 @function sprite-attr($icon, $attr) {
 	$newIcon: map-get($icons, $icon);
 	@if $newIcon == null {

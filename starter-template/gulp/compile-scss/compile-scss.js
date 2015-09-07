@@ -22,7 +22,12 @@ module.exports = function() {
             }
         }))
         .pipe(sourcemaps.init())
-        .pipe(sass(options))
+        .pipe(sass(options)
+            .on('error', function (err) {
+                sass.logError(err);
+                this.emit('end');
+            })
+        )
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.scss.cssFolder));
 };
