@@ -1,51 +1,33 @@
 @charset "utf-8";
 
-// The toolkit uses recommendations from out FrontEnd Bible
-// with optional support for Bourbon, Susy and Neat
-
-// Site:    https://github.com/devbridge/Front-End-Toolkit
-// Author:  Devbridge Group
-// Email:   //TODO add devbproto email
-
-// Contents:
-// 01. Core ( Bourbon/Susy or Neat includes, Variables, Spriting, Functions, Mixins, Helpers classes and etc... )
-// 02. Base & Layout ( regular elements, styles, layout template, grid structure )
-// 03. Modules ( modules, background, colors, typography.. )
-// 04. Pages ( styles, dedicated for page group )
-// 05. Print
-// 06. Shame
-
-// ==========================================================================
-// Core
-// ==========================================================================
-@import "core/variables",
+// Dependencies
+@import
 		"bourbon",
-		"core/normalize",
+		"neat";
+
+// Core
+@import "core/normalize",
+		"core/extenders",
 		"core/mixins",
-		"core/functions",
-		"core/extenders";
+		"core/functions";
 
-// ==========================================================================
 // Base & Layout
-// ==========================================================================
-@import "site/layout";
+@import
+		"site/layout";
 
-// ==========================================================================
-// Modules - entry point for all modules
-// ==========================================================================
-@import "modules/index";
+// Modules
+@import
+		"modules/global",
+		"modules/forms",
+		"modules/modal",
+		"modules/slider",
+		"modules/tables";
 
-// ==========================================================================
-// Pages - styles, dedicated for page category
-// ==========================================================================
-@import "site/pages/home";
+// Pages
+@import
+		"site/pages/home";
 
-// ==========================================================================
-// $Print
-// ==========================================================================
-@import "site/print";
 
-// ==========================================================================
-// $Shame
-// ==========================================================================
-@import "site/shame";
+// Print
+@import
+		"site/print";

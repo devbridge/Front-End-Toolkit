@@ -47,14 +47,14 @@
 }
 
 .modal-title {
-    background: #fff;
+    background-color: #fff;
     box-sizing: border-box;
     font-weight: 700;
     padding: 20px;
 }
 
 .modal-content {
-    background: #fff;
+    background-color: #fff;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -74,9 +74,11 @@
     &:after {
         content: '\00d7';
         display: inline-block;
-        font-family: 'helvetica', sans-serif;
-        font-size: 30px;
-        font-weight: 400;
+        font: {
+            family: 'helvetica', sans-serif;
+            size: 30px;
+            weight: 400;
+        }
         height: 30px;
         line-height: 30px;
         position: absolute;

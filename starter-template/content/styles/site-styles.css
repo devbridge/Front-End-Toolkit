@@ -68,7 +68,6 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -127,8 +126,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-cancel-button,
@@ -179,16 +176,6 @@ body {
   text-align: center;
   font-size: 16px;
   z-index: 2147483647; }
-
-.icn-arrow {
-  display: block;
-  background: url("images/icons.png?=1432884544047") 0px 0px no-repeat;
-  width: 29px;
-  height: 67px; }
-  @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-    .icn-arrow {
-      background: url("images/icons@2x.png?=1432884544047") 0px 0px no-repeat;
-      background-size: 29px 67px; } }
 
 [disabled] {
   cursor: not-allowed; }

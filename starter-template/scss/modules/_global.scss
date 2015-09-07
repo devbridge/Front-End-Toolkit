@@ -1,12 +1,7 @@
 .noscript-message {
-    background: #fff1bb;
+    background-color: #fff1bb;
     padding: 3px;
     text-align: center;
     font-size: 16px;
     z-index: 2147483647;
-}
-
-.icn-arrow {
-    display:block;
-    @include get-sprite($icn-arrow-left, $icn-arrow-left-retina);
 }
