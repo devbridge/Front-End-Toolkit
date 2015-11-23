@@ -4,8 +4,8 @@ require.config({
     baseUrl: '/scripts/',
     paths: {
         jquery: [
-            '//cdn.jsdelivr.net/jquery/1.8.3/jquery-1.8.3.min',
-            '/libs/jquery-1.8.3.min'
+            '//cdn.jsdelivr.net/jquery/1.11.3/jquery.min',
+            'libs/jquery-1.11.3.min'
         ],
         validation: [
             '//cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min',
