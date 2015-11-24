@@ -2,9 +2,7 @@
 html {
   box-sizing: border-box; }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   box-sizing: inherit; }
 
 article,
@@ -70,9 +68,6 @@ sub {
 img {
   border: 0; }
 
-svg:not(:root) {
-  overflow: hidden; }
-
 figure {
   margin: 1em 40px; }
 
@@ -107,7 +102,8 @@ select {
   text-transform: none; }
 
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer; }
@@ -181,9 +177,9 @@ body {
 
 .noscript-message {
   background-color: #fff1bb;
+  font-size: 16px;
   padding: 3px;
   text-align: center;
-  font-size: 16px;
   z-index: 2147483647; }
 
 [disabled] {
@@ -201,10 +197,10 @@ body {
       top: 0; } }
 
 .modal-context {
-  -webkit-overflow-scrolling: touch;
   background-color: rgba(211, 211, 211, 0.8);
   height: 100%;
   left: 0;
+  -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   position: fixed;
   top: 0;
@@ -304,8 +300,7 @@ body {
   top: 0;
   display: block;
   zoom: 1; }
-  .slick-track:before,
-  .slick-track:after {
+  .slick-track:before, .slick-track:after {
     content: "";
     display: table; }
   .slick-track:after {
@@ -360,15 +355,15 @@ body {
   padding: 0;
   border: none;
   outline: none; }
-  .slick-prev:hover,
-  .slick-prev:focus,
-  .slick-next:hover, .slick-next:focus {
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
     outline: none;
     background: transparent;
     color: transparent; }
-    .slick-prev:hover:before,
-    .slick-prev:focus:before,
-    .slick-next:hover:before, .slick-next:focus:before {
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
       opacity: 1; }
   .slick-prev.slick-disabled:before,
   .slick-next.slick-disabled:before {
@@ -458,6 +453,9 @@ body {
       color: black;
       opacity: 0.75; }
 
+img {
+  max-width: 100%; }
+
 @media print {
   * {
     background: transparent !important;
@@ -468,13 +466,13 @@ body {
   a:visited {
     text-decoration: underline; }
   a[href]:after {
-    content: " (" attr(href) ")"; }
+    content: ' (" attr(href) ")'; }
   abbr[title]:after {
-    content: " (" attr(title) ")"; }
+    content: ' (" attr(title) ")'; }
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
-    content: ""; }
+    content: ''; }
   pre,
   blockquote {
     border: 1px solid #999;
