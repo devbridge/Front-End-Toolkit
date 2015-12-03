@@ -2,7 +2,10 @@
 module.exports = function () {
     var config = {
         scss: {
-            scssFolder: 'scss/',
+            src: [
+                './scss/**/*.scss',
+                '!scss/**/*_scsslint_tmp*.scss'
+            ],
             cssFolder: 'content/styles/'
         },
         svg: {
