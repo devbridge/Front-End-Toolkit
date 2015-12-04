@@ -447,6 +447,9 @@ body {
       color: black;
       opacity: 0.75; }
 
+table {
+  width: 100%; }
+
 img {
   max-width: 100%; }
 
