@@ -1,29 +1,36 @@
 @charset "utf-8";
-@import 'core/variables';
 
-// Dependencies
+@import 'core/config'; // Use it to define variables which are needed before frameworks' imports, also can have variables needed to use frameworks.
+//Frameworks
 @import 'bourbon';
 @import 'neat';
 
-// Core
-@import 'core/normalize';
-@import 'core/extenders';
-@import 'core/mixins';
-@import 'core/functions';
+//Dependencies
+@import 'core/colors', // Only color variables.
+'core/variables', // Typography, other variables, also other variables that might include colors (f.e. borders).
+'core/assets', // Use it for image urls, local webfonts or other assets your might have.
+'core/mixins', // Mixins, functions, extenders.
+'core/normalize', // Contains CSS output to fix cross-browser inconsistencies.
+'core/notifications',
+'core/svg-sprite'; // @include svg-sprite()
 
-// Base & Layout
-@import 'site/layout';
+//Global modules - something used in multiple sites or separated parts of project
+@import 'global/modal',
+'global/tables';
 
-// Modules
-@import 'modules/global';
-@import 'modules/forms';
-@import 'modules/modal';
-@import 'modules/slider';
-@import 'modules/tables';
-@import 'modules/typography';
+//Plugins - imported from 3rd party resource and most likely connected to functionality
+@import 'plugins/slick';
 
-// Pages
-@import 'site/pages/home';
+//Styles for pages or similar views - styles that are connected by content
+@import 'site-public/pages/home',
+'site-public/print';
 
-// Print
-@import 'site/print';
+//Styles for modules or groups of similar elements - styles that are connected by functionality and are easy to reuse and extend
+@import 'site-public/modules/formelements',
+'site-public/modules/index',
+'site-public/modules/typography';
+
+//Structure
+@import 'site-public/layout/layout',
+'site-public/layout/header',
+'site-public/layout/footer';

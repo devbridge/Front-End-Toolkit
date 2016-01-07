@@ -9,7 +9,7 @@ module.exports = function () {
             cssFolder: 'content/styles/'
         },
         svg: {
-            sourceFolder: 'scss/sprites/svg/',
+            sourceFolder: 'scss/assets/icons/',
             spriteFolder: 'content/styles/images/',
             scssMapFolder: 'scss/core/',
             pngFallback: false
