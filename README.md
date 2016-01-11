@@ -19,7 +19,6 @@ To ease setup process of the new project we have created a starter template whic
 * Automated Gulp tasks:
     * gulp-sass - [npmjs.com/package/gulp-sass](https://www.npmjs.com/package/gulp-sass)
     * gulp-svg-sprite - [npmjs.com/package/gulp-svg-sprite](https://www.npmjs.com/package/gulp-svg-sprite)
-    * gulp-svg2png - [npmjs.com/package/gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png)
 
 
 To install template:
