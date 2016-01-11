@@ -3,7 +3,7 @@ var gulp = require('gulp'),
 
 module.exports = function(){
 
-    gulp.watch(config.scss.scssFolder + '**/*.scss', ['compile-scss']);
+    gulp.watch(config.scss.src, ['compile-scss']);
 
 };
 

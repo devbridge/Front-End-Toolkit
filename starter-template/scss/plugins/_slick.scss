@@ -24,21 +24,21 @@ $opacity-not-active: .25;
 
 
 @function slick-image-url($url) {
-  @if function-exists(image-url) {
-    @return image-url($url, false, false);
-  }
-  @else  {
-    @return url($slick-loader-path + $url);
-  }
+    @if function-exists(image-url) {
+        @return image-url($url, false, false);
+    }
+    @else  {
+        @return url($slick-loader-path + $url);
+    }
 }
 
 @function slick-font-url($url) {
-  @if function-exists(font-url) {
-    @return font-url($url);
-  }
-  @else  {
-    @return url($slick-font-path + $url);
-  }
+    @if function-exists(font-url) {
+        @return font-url($url);
+    }
+    @else  {
+        @return url($slick-font-path + $url);
+    }
 }
 
 /* Slider */
@@ -145,16 +145,16 @@ $opacity-not-active: .25;
 
 /* Icons */
 @if $slick-font-family == "slick" {
-  @font-face {
-      font-family:"slick";
-      src:    slick-font-url("slick.eot");
-      src:    slick-font-url("slick.eot?#iefix") format("embedded-opentype"),
-              slick-font-url("slick.woff") format("woff"),
-              slick-font-url("slick.ttf") format("truetype"),
-              slick-font-url("slick.svg#slick") format("svg");
-      font-weight: normal;
-      font-style: normal;
-  }
+    @font-face {
+        font-family:"slick";
+        src:    slick-font-url("slick.eot");
+        src:    slick-font-url("slick.eot?#iefix") format("embedded-opentype"),
+        slick-font-url("slick.woff") format("woff"),
+        slick-font-url("slick.ttf") format("truetype"),
+        slick-font-url("slick.svg#slick") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
 }
 
 /* Arrows */
@@ -176,12 +176,12 @@ $opacity-not-active: .25;
     border: none;
     outline: none;
     &:hover, &:focus {
-      outline: none;
-      background: transparent;
-      color: transparent;
-      &:before {
-        opacity: $opacity-on-hover;
-      }
+        outline: none;
+        background: transparent;
+        color: transparent;
+        &:before {
+            opacity: $opacity-on-hover;
+        }
     }
     &.slick-disabled:before {
         opacity: $opacity-not-active;
@@ -261,7 +261,7 @@ $opacity-not-active: .25;
             &:hover, &:focus {
                 outline: none;
                 &:before {
-                  opacity: $opacity-on-hover;
+                    opacity: $opacity-on-hover;
                 }
             }
 

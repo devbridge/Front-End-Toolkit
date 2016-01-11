@@ -14,7 +14,7 @@ module.exports = function() {
         sourceComments: false
     };
 
-    return gulp.src( config.scss.scssFolder + '**/*.scss')
+    return gulp.src(config.scss.src)
         .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err);
@@ -23,10 +23,7 @@ module.exports = function() {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass(options)
-            .on('error', function (err) {
-                sass.logError(err);
-                this.emit('end');
-            })
+            .on('error', sass.logError)
         )
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.scss.cssFolder));
