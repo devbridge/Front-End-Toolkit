@@ -42,4 +42,5 @@ A collection of resources, useful tools and technologies for front-end web devel
 
 
 This project is brought you by: [Devbridge Group](https://www.devbridge.com/) 
+
 [![Analytics](https://ga-beacon.appspot.com/UA-73039601-1/Front-End-Toolkit/readme)](https://github.com/igrigorik/ga-beacon)
