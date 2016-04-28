@@ -28,7 +28,7 @@
   "homepage": "https://github.com/devbridge/Front-End-Toolkit",
   "devDependencies": {
     "gulp-imagemin": "^2.3.0",
-    "gulp-task-loader": "^1.2.1",
+    "gulp-task-loader": "1.2.1",
     "imagemin-pngquant": "^4.2.0",
     "gulp-ignore": "^2.0.1"
   }
