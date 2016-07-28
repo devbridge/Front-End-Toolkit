@@ -1,0 +1,9 @@
+$noscript-notification-text-color: #fff1bb;
+
+.noscript-message {
+    background-color: $noscript-notification-text-color;
+    font-size: 16px;
+    padding: 3px;
+    text-align: center;
+    z-index: 2147483647;
+}
