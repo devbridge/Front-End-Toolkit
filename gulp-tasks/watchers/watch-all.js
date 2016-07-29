@@ -1,7 +1,5 @@
 module.exports = function () {
-	var gulp = require('gulp'),
-		config = require('../gulp.config.js')();
-
+	var gulp = require('gulp');
 	gulp.start(['check-deps', 'watch-scss', 'watch-svg']);
 };
 

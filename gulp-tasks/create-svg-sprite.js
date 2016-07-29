@@ -1,33 +1,9 @@
-var config = require('../gulp.config.js')();
-
 module.exports = function () {
 	var gulp = require('gulp'),
 		plumber = require('gulp-plumber'),
 		svg2png = require('gulp-svg2png'),
+		config = require('../gulp.config.js')(),
 		svgSprite = require('gulp-svg-sprite');
-
-
-	var svgConfig = {
-		shape: {
-			spacing: {
-				padding: 0
-			}
-		},
-		mode: {
-			css: {
-				bust: false,
-				dest: './',
-				// layout: 'vertical', 'horizontal', 'diagonal'
-				sprite: config.svg.spriteFolder + 'sprite.svg',
-				render: {
-					scss: {
-						dest: config.svg.scssMapFolder + '_svg-sprite-map.scss',
-						template: config.svg.scssMapFolder + '_svg-sprite-template.scss'
-					}
-				}
-			}
-		}
-	};
 
 	gulp.task('svg-sprite', function () {
 		gulp.src(config.svg.sourceFolder + '*.svg')
@@ -37,7 +13,7 @@ module.exports = function () {
 					this.emit('end');
 				}
 			}))
-			.pipe(svgSprite(svgConfig))
+			.pipe(svgSprite(config.svgConfig))
 			.pipe(gulp.dest('./'));
 	});
 
