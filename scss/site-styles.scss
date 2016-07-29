@@ -27,11 +27,12 @@
 @import 'modules/typography';
 
 // Styles for project pages or similar views - styles that are connected by content
-@import 'print',
-		'pages/home';
+@import 'pages/home';
 
 // Structure
 @import 'modules/layout',
 'modules/header',
 'modules/footer';
+
+@import 'print';
 

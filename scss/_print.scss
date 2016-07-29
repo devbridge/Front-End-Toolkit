@@ -1,4 +1,6 @@
 $_print-text-color: #999;
+$_black: #000;
+$_white: #fff;
 
 // Print
 // Inlined to avoid required HTTP connection: h5bp.com/r
@@ -8,7 +10,7 @@ $_print-text-color: #999;
         // scss-lint:disable ImportantRule
         background: transparent !important;
         box-shadow: none !important;
-        color: $black !important; // Black prints faster: h5bp.com/s
+        color: $_black !important; // Black prints faster: h5bp.com/s
         text-shadow: none !important;
         // scss-lint:enable ImportantRule
     }
