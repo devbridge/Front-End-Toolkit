@@ -5,7 +5,10 @@ module.exports = function () {
 		config = require('../gulp.config.js')();
 
 	return gulp.src(config.optimize.images.src)
-		.pipe(cache(imagemin(config.optimize.images.options)))
+		.pipe(cache(imagemin([
+
+			imagemin.optipng({optimizationLevel: 7})
+		])))
 		.pipe(gulp.dest(config.optimize.images.dest));
 };
 

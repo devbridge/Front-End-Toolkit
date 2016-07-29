@@ -16,7 +16,7 @@ module.exports = function () {
 			},
 			svg: {
 				sourceFolder: svg.sourceFolder,
-				spriteFolder: svg.spriteFolder,
+				spriteFolder: svg.spr,
 				scssMapFolder: svg.scssMapFolder,
 				pngFallback: svg.pngFallback
 			},
