@@ -6,7 +6,8 @@ module.exports = function() {
         bourbon = require('bourbon'),
         sourcemaps = require('gulp-sourcemaps'),
         neat = require('node-neat').includePaths,
-        csso = require('gulp-csso');
+        csso = require('gulp-csso'),
+        autoprefixer = require('gulp-autoprefixer');
 
     var options = {
         includePaths: neat,
@@ -31,6 +32,10 @@ module.exports = function() {
         }))
         .on('error', swallowError)
         .pipe(csso())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.scss.cssFolder));
 };
