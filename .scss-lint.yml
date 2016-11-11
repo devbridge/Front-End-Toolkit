@@ -7,3 +7,5 @@ linters:
     enabled: false
   TransitionAll:
     enabled: true
+  SelectorFormat:
+    convention: hyphenated_BEM
