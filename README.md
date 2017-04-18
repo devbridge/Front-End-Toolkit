@@ -1,7 +1,7 @@
 # **Front-End Toolkit** #
 This project is a collections of resources, best practices and tools for front-end developers. Is made to help unify workflow and standardize the code inside our team.
 
-##Starter Template##
+## Starter Template ##
 To ease setup process of the new project we have created a starter template which contains:
 
 * Javascript files structure including following plugins:
@@ -29,7 +29,7 @@ To install template:
 
 _Note: we use [npm package manager](https://www.npmjs.com/) to manage our modules and [Gulp](http://gulpjs.com/) to run automated tasks. Also, to use npm manager you must have [Node.js](https://nodejs.org/) installer on your machine._
 
-##Wiki##
+## Wiki ##
 A collection of resources, useful tools and technologies for front-end web development.
 
 * **[Front-End Bible](https://github.com/devbridge/Front-End-Toolkit/wiki/Front-End-Bible)** - _Set of rules for front-end developer._
