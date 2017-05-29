@@ -8,31 +8,31 @@
 
 // Dependencies
 @import 'base/colors', // Only color variables.
-		'base/assets', // Variables for image urls, local web fonts or other assets your might have.
 		'base/variables', // All other variables, including typography, measurements and etc.
 		'mixins/mixins', // Mixins, functions, extenders.
 		'vendor/normalize', // Contains CSS output to fix cross-browser inconsistencies.
-		'base/notifications',
 		'base/svg-sprite';
 
 // Plugins - Styles of third party plugins
 //@import 'plugins/slick';
 
 // Global modules - modules shared between multiple projects (e.g. admin and public sites)
-@import 'modules/forms';
-		//'modules/tables',
-		//'modules/modal';
+@import 'components/notifications',
+		'components/form-elements/index';
+		//'components/tables',
+		//'components/modal';
 
 // Local modules
-@import 'modules/typography';
+@import 'components/typography';
 
 // Styles for project pages or similar views - styles that are connected by content
 @import 'pages/home';
 
 // Structure
-@import 'modules/layout',
-'modules/header',
-'modules/footer';
+@import 'components/global',
+'components/helpers',
+'components/header',
+'components/footer';
 
 @import 'print';
 

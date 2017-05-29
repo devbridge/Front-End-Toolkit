@@ -24,6 +24,10 @@ body {
     }
 }
 
+[disabled] {
+    cursor: not-allowed;
+}
+
 .clearfix {
     @include clearfix($extend: true)
 }
