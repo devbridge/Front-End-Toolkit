@@ -1,8 +1,8 @@
 //
-// Layout Rules
+// Global element rules
 //
-// Layout styles can also be divided into major and minor styles based on
-// reuse. Fox example, major layout styles can be dedicated for header and/or footer.
+// Elements, that needs to be styled globally, should be styled here.
+// Only native html elements/selectors should be here, if you have class styled in this file - consider separating it to another file.
 
 html,
 body {
@@ -18,9 +18,9 @@ body {
 
     // To prevent the iPhone and iPad from inflating fonts
     @include respond-to(1024, max) {
-        // scss-lint:disable VendorPrefix
+        // scss-lint:disable no-vendor-prefix
         -webkit-text-size-adjust: 100%;
-        // scss-lint:enable VendorPrefix
+        // scss-lint:enable no-vendor-prefix
     }
 }
 
@@ -28,6 +28,45 @@ body {
     cursor: not-allowed;
 }
 
-.clearfix {
-    @include clearfix($extend: true)
+ul {
+
 }
+
+ol {
+
+}
+
+figure {
+
+}
+
+strong {
+
+}
+
+em {
+
+}
+
+p {
+
+}
+
+hr {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+
+}
+
+table {
+    //border-collapse: collapse;
+    //table-layout: fixed;
+    width: 100%;
+}
+
