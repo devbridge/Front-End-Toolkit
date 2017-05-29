@@ -1,75 +1,105 @@
+const argv = require("yargs").argv;
+
+const ENV = process.env.npm_lifecycle_event;
+const isProd = ENV && ENV.startsWith("build");
+
 module.exports = function () {
-	var svg = {
-		sourceFolder: 'scss/assets/icons/',
-		spriteFolder: 'content/styles/images/',
-		scssMapFolder: 'scss/base/',
-		pngFallback: false
+	const app = argv.app || "src";
+	const environment = argv.environment || "dev";
+
+	const distFolder = "build";
+
+
+	const tmp = "tmp/";
+	const svg = {
+		sourceFolder: `${app}/scss/assets/icons/`,
+		spriteFolder: `${distFolder}/styles/images/`,
+		scssMapFolder: `${app}/scss/base/`,
+		scssTemplateFolder: `${app}/scss/base/`,
+		pngFallback: true
 	};
-	var config = {
-			path: {
-				HTML: '/index.html',
-				ALL: ['scripts/**/*.jsx', 'scripts/**/*.js'],
-				MINIFIED_OUT: 'build.min.js',
-				DEST_SRC: 'scripts',
-				DEST_BUILD: 'scripts',
-				DEST: 'dist'
-			},
-			svg: {
-				sourceFolder: svg.sourceFolder,
-				spriteFolder: svg.spr,
-				scssMapFolder: svg.scssMapFolder,
-				pngFallback: svg.pngFallback
-			},
-			scss: {
-				src: [
-					'./scss/**/*.scss',
-					'!scss/**/*_scsslint_tmp*.scss' //ignores temporary scss-lint files
-				],
-				cssFolder: 'content/styles/'
-			}
-			,
-			optimize: {
-				css: {}
-				,
-				js: {}
-				,
-				images: {
-					src: 'content/images/originals/**/*.{png,gif,jpg,svg}',
-					dest: 'content/images/',
-					options: {                       // Target options
-						optimizationLevel: 7,
-						svgoPlugins: [{removeViewBox: false}],
-						progessive: true,
-						interlaced: true
-					}
+	const config = {
+		tmp,
+		root: "./",
+		packages: [
+			"./package.json"
+		],
+		custom: {
+			foldersToLint: ["src"]
+		},
+		path: {
+			HTML: "/index.html",
+			ALL: [`${app}/src/main.js`],
+			MINIFIED_OUT: "build.min.js",
+			DEST_SRC: "scripts",
+			DEST_BUILD: "scripts",
+			DEST: distFolder
+		},
+		environmentConfig: {
+			source: `config/${environment}.js`
+		},
+		svg: {
+			sourceFolder: svg.sourceFolder,
+			spriteFolder: svg.spriteFolder,
+			scssMapFolder: svg.scssMapFolder,
+			pngFallback: svg.pngFallback
+		},
+		scss: {
+			src: [
+				`./${app}/scss/**/*.scss`,
+				`!./${app}/scss/**/*_scsslint_tmp*.scss` //ignores temporary scss-lint files
+			],
+			lint: [
+				`./${app}/scss/**/*.scss`,
+				`!./${app}/scss/base/_svg-sprite-map.scss`,
+				`!./${app}/scss/base/_svg-sprite.scss`,
+				`!./${app}/scss/**/*_scsslint_tmp*.scss`,
+				`!./${app}/scss/vendor/**/*.scss`,
+				`!./${app}/scss/base/_svg-sprite-map.scss`,
+				`!./${app}/scss/base/_svg-sprite-template.mustache`
+			],
+			cssFolder: `${distFolder}/styles/`
+		}
+		,
+		optimize: {
+			css: {},
+			js: {},
+			images: {
+				src: `${app}/assets/images/**/*.{png,gif,jpg,svg}`,
+				dest: `${distFolder}/images/`,
+				options: {                       // Target options
+					optimizationLevel: 7,
+					svgoPlugins: [{removeViewBox: false}],
+					progessive: true,
+					interlaced: true
 				}
 			}
-			,
-			svgConfig: {
-				shape: {
-					spacing: {
-						padding: 0
-					}
+		},
+		svgConfig: {
+			shape: {
+				spacing: {
+					padding: 4
 				}
-				,
-				mode: {
-					css: {
-						bust: false,
-						dest: './',
-						// layout: 'vertical', 'horizontal', 'diagonal'
-						sprite: svg.spriteFolder + 'sprite.svg',
-						render: {
-							scss: {
-								dest: svg.scssMapFolder + '_svg-sprite-map.scss',
-								template: svg.scssMapFolder + '_svg-sprite-template.scss'
-							}
+			},
+			variables: {
+				version: Math.round(+new Date() / 1000)
+			},
+			mode: {
+				css: {
+					bust: false,
+					dest: "./",
+					// layout: "vertical", "horizontal", "diagonal"
+					sprite: svg.spriteFolder + "sprite.svg",
+					render: {
+						scss: {
+							dest: svg.scssMapFolder + "_svg-sprite-map.scss",
+							template: svg.scssTemplateFolder + "_svg-sprite-template.mustache"
 						}
 					}
 				}
 			}
-			,
 		}
-		;
+	};
 
 	return config;
 };

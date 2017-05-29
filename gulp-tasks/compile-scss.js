@@ -28,7 +28,7 @@ module.exports = function() {
             outputStyle: 'expanded',
             sourceMap: true,
             noCache: false,
-            includePaths: [].concat(neat, bourbon)
+            includePaths: [].concat(neat, bourbon, config.tmp)
         }))
         .on('error', swallowError)
         .pipe(csso())
