@@ -9,4 +9,6 @@
 * Moved from scss-lint to sass-lint, fixed issues in code.
 * Added language tag in HTML.
 * Added gulp-accessibility task for automated accessibility testing.
+* Pre-commit hooks, preventing from non-linting code pushing to branch.
+
 
