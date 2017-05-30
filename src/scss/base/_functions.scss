@@ -1,0 +1,56 @@
+// FUNCTION: Generate susy media query MAP
+// EXAMPLE USAGE: susy-media-query(768px, min)
+@function susy-media-query(
+    $width,
+    $type: max,
+    $screen: screen
+) {
+    $media-query-map: () !default;
+
+    // Prepare media query properties
+    $screen-type: (media: $screen);
+    $media-type: (#{$type}-width: $width);
+
+    $media-query-map: map-merge($screen-type, $media-type);
+
+    @return $media-query-map;
+}
+
+// HELPER FUNCTION: An easy way to fetch a deep value in a multi-level map.
+// Works much like map-get() except that you pass multiple keys as the second parameter to go down multiple levels in the nested map.
+@function map-fetch($map, $keys) {
+    $key: nth($keys, 1);
+    $length: length($keys);
+    $value: map-get($map, $key);
+
+    @if ($length > 1) and type-of($value) == map {
+        $rest: ();
+
+        @for $i from 2 through $length {
+            $rest: append($rest, nth($keys, $i));
+        }
+
+        @return map-fetch($value, $rest);
+    } @else {
+        @return $value;
+    }
+}
+
+// FUNCTION: Fetches results from the layout configuration maps (declared on _config.scss)
+// Note that arguments order is reversed when using this function compared to config map (using reverse() function)
+@function get-layout-config($map, $args...) {
+    $result: map-fetch($map, $args);
+    @if ($result) {
+        @return $result;
+    } @else {
+        @warn 'The parameters you are using on global() function are invalid. Check configuration map values (see _config.scss)';
+        @return false;
+    }
+}
+
+// FUNCTION: Get global layout configuration values (default).
+// For example, global(header, zIndex). First value is element, and the second is type of value.
+// IMPORTANT: Depends on $layout-global-config, which is declared on _config.scss file.
+@function global($args...) {
+    @return get-layout-config($layout-global-config, $args...);
+}

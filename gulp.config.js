@@ -44,6 +44,11 @@ module.exports = function () {
 			scssMapFolder: svg.scssMapFolder,
 			pngFallback: svg.pngFallback
 		},
+        html: {
+            src: [
+                `./${app}/**/*.html`
+            ],
+        },
 		scss: {
 			src: [
 				`./${app}/scss/**/*.scss`,
@@ -55,8 +60,7 @@ module.exports = function () {
 				`!./${app}/scss/base/_svg-sprite.scss`,
 				`!./${app}/scss/**/*_scsslint_tmp*.scss`,
 				`!./${app}/scss/vendor/**/*.scss`,
-				`!./${app}/scss/base/_svg-sprite-map.scss`,
-				`!./${app}/scss/base/_svg-sprite-template.mustache`
+				`!./${app}/scss/base/_svg-sprite-map.scss`
 			],
 			cssFolder: `${distFolder}/styles/`
 		}
