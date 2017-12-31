@@ -15,6 +15,7 @@
     "gulp-htmlhint": "0.3.1",
     "gulp-htmllint": "0.0.12",
     "gulp-htmlrender": "0.3.0",
+    "node-neat": "2.0.0-beta.0",
     "run-sequence": "1.2.2"
   },
   "scripts": {

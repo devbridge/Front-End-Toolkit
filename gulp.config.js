@@ -46,7 +46,7 @@ module.exports = function () {
 		},
         html: {
             src: [
-                `./${app}/html/**/*.html`
+                `./${app}/**/*.html`
             ],
             dest: 'public'
         },
