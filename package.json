@@ -8,11 +8,13 @@
   "description": "Starter project",
   "main": "gulpfile.js",
   "dependencies": {
+    "event-stream": "3.3.4",
     "gulp-accessibility": "3.0.1",
     "gulp-cache": "0.4.5",
     "gulp-eslint": "3.0.1",
     "gulp-htmlhint": "0.3.1",
     "gulp-htmllint": "0.0.12",
+    "gulp-htmlrender": "0.3.0",
     "run-sequence": "1.2.2"
   },
   "scripts": {
@@ -25,6 +27,7 @@
   },
   "homepage": "https://github.com/devbridge/Front-End-Toolkit",
   "devDependencies": {
+    "hugo-bin": "^0.13.0",
     "autoprefixer": "7.1.1",
     "check-dependencies": "1.0.1",
     "gulp": "3.9.1",

@@ -13,21 +13,22 @@
 'vendor/normalize', // Contains CSS output to fix cross-browser inconsistencies.
 'base/svg-sprite';
 
+// Global HTML elements
+@import 'components/global';
+
 // Plugins - Styles of third party plugins
 // Global modules - modules shared between multiple projects (e.g. admin and public sites)
-@import 'components/notifications',
-'components/form-elements/index';
+@import '/src/components/notifications/notifications',
+'/src/components/form-elements/index';
 
 // Local modules
 @import 'components/headings';
 
-// Styles for project pages or similar views - styles that are connected by content
-@import 'pages/home';
+// Components
+@import 'components/helpers',
+'/src/components/header/header',
+'/src/components/footer/footer';
 
-// Structure
-@import 'components/global',
-'components/helpers',
-'components/header',
-'components/footer';
+// Print stylesheet
 @import 'print';
 

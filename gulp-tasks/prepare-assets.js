@@ -7,6 +7,7 @@ module.exports = function (done) {
         'create-svg-sprite',
         'scss-linting',
         'compile-scss',
+        'html-render',
         done);
 };
 

@@ -8,6 +8,7 @@ module.exports = function (done) {
         "prepare-config",
         "clear-image-cache",
         "watch-scss",
+        "watch-htmlrender",
         "watch-svg",
         "watch-images-optimize",
         done
