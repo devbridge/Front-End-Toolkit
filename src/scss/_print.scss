@@ -4,7 +4,7 @@ $_white: #fff;
 
 // Print
 // Inlined to avoid required HTTP connection: h5bp.com/r
-
+// sass-lint:disable-all
 @media print {
     * {
         // scss-lint:disable ImportantRule
@@ -74,3 +74,4 @@ $_white: #fff;
         page-break-after: avoid;
     }
 }
+// sass-lint:enable-all

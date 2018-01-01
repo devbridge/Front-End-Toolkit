@@ -1,5 +1,6 @@
 @mixin respond-to($size, $dir) {
     @if ($size == retina) {
+        // sass-lint:disable-block no-vendor-prefixes
         @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
             @content;
         }

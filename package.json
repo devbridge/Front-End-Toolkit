@@ -8,6 +8,7 @@
   "description": "Starter project",
   "main": "gulpfile.js",
   "dependencies": {
+    "bourbon": "4.3.4",
     "event-stream": "3.3.4",
     "gulp-accessibility": "3.0.1",
     "gulp-cache": "0.4.5",

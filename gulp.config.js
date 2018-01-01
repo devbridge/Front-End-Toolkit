@@ -7,7 +7,7 @@ module.exports = function () {
 	const app = argv.app || "src";
 	const environment = argv.environment || "dev";
 
-	const distFolder = "build";
+	const distFolder = "dist";
 
 
 	const tmp = "tmp/";
