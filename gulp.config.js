@@ -13,7 +13,7 @@ module.exports = function () {
 	const tmp = "tmp/";
 	const svg = {
 		sourceFolder: `${app}/scss/assets/icons/`,
-		spriteFolder: `${distFolder}/styles/images/`,
+		spriteFolder: `${distFolder}/content/styles/images/`,
 		scssMapFolder: `${app}/scss/base/`,
 		scssTemplateFolder: `${app}/scss/base/`,
 		pngFallback: true
@@ -46,9 +46,9 @@ module.exports = function () {
 		},
         html: {
             src: [
-                `./${app}/**/*.html`
+                `./${distFolder}/**/*.html`
             ],
-            dest: 'public'
+            dest: 'dist'
         },
 		scss: {
 			src: [
@@ -63,7 +63,7 @@ module.exports = function () {
 				`!./${app}/scss/vendor/**/*.scss`,
 				`!./${app}/scss/base/_svg-sprite-map.scss`
 			],
-			cssFolder: `${distFolder}/styles/`
+			cssFolder: `${distFolder}/content/styles/`
 		}
 		,
 		optimize: {
