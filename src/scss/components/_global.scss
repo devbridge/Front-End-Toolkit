@@ -18,9 +18,7 @@ body {
 
     // To prevent the iPhone and iPad from inflating fonts
     @include respond-to(1024, max) {
-        // scss-lint:disable no-vendor-prefix
-        -webkit-text-size-adjust: 100%;
-        // scss-lint:enable no-vendor-prefix
+        -webkit-text-size-adjust: 100%; // sass-lint:disable-line no-vendor-prefixes
     }
 }
 
@@ -69,4 +67,3 @@ table {
     //table-layout: fixed;
     width: 100%;
 }
-

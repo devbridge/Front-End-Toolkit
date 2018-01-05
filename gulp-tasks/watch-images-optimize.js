@@ -4,4 +4,3 @@ module.exports = function () {
 
 	gulp.watch(config.optimize.images.src, ['image-optimization']);
 };
-

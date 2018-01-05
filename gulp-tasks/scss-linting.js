@@ -10,4 +10,3 @@ module.exports = function () {
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError());
 };
-
