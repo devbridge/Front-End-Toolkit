@@ -1,5 +1,5 @@
 module.exports = function () {
-	let htmlhint = require("gulp-htmlhint"),
+	let htmlhint = require('gulp-htmlhint'),
 		gulp = require('gulp'),
 		config = require('../gulp.config.js')();
 
@@ -7,5 +7,3 @@ module.exports = function () {
         .pipe(htmlhint())
         .pipe(htmlhint.reporter())
 };
-
-

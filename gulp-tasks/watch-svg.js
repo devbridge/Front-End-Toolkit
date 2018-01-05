@@ -7,6 +7,4 @@ module.exports = function () {
 		require('gulp-task-loader')('gulp/create-svg-sprite');
 		gulp.start('create-svg-sprite');
 	});
-
 };
-

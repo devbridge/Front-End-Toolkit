@@ -1,7 +1,7 @@
-const gulp = require("gulp");
-const eslint = require("gulp-eslint");
-const config = require("../gulp.config.js")();
-const _ = require("lodash");
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
+const config = require('../gulp.config.js')();
+const _ = require('lodash');
 
 module.exports = function () {
 

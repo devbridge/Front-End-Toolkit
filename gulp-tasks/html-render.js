@@ -3,9 +3,7 @@ module.exports = function () {
         htmlrender = require('gulp-htmlrender'),
         config = require('../gulp.config.js')();
 
-    return gulp.src('src/**/*.html', {read: false})
+    return gulp.src(config.html.src, {read: false})
         .pipe(htmlrender.render())
         .pipe(gulp.dest('dist'));
 };
-
-
