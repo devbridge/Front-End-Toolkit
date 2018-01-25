@@ -1,7 +1,5 @@
 module.exports = function (done) {
-    var gulp = require('gulp'),
-        runSequence = require('run-sequence'),
-        config = require('../gulp.config.js')();
+    var runSequence = require('run-sequence');
 
     return runSequence('image-optimization',
         'create-svg-sprite',
@@ -10,5 +8,3 @@ module.exports = function (done) {
         'html-render',
         done);
 };
-
-

@@ -21,7 +21,6 @@ module.exports = function() {
         this.emit('end');
     }
 
-
     return gulp.src(config.scss.src)
         .pipe(sourcemaps.init())
         .pipe(sass({
@@ -39,5 +38,3 @@ module.exports = function() {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.scss.cssFolder));
 };
-
-
