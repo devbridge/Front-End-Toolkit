@@ -9,7 +9,7 @@
 // @include svg-sprite('file-name', 'size in px or em');
 
 $base-font-size: 16px !default;
-$ie-sprite: '.ie8' !default;
+$ie-sprite: '.ie' !default;
 
 $sprite: map-get($icons, sprite) !default;
 
@@ -17,7 +17,7 @@ $sprite: map-get($icons, sprite) !default;
 @function sprite-attr($icon, $attr) {
     $new-icon: map-get($icons, $icon);
     @if $new-icon == null {
-        @warn "Can't find an icon with the name #{$icon}";
+        @warn 'Can`t find an icon with the name #{$icon}';
     }
     @return map-get($new-icon, $attr);
 }
@@ -25,10 +25,10 @@ $sprite: map-get($icons, sprite) !default;
 // Create a map with the specified icon of attributes
 @function icon-attr($icon) {
     $attr: (
-            width: sprite-attr($icon, width),
-            height: sprite-attr($icon, height),
-            x: sprite-attr($icon, backgroundX),
-            y: sprite-attr($icon, backgroundY)
+        width: sprite-attr($icon, width),
+        height: sprite-attr($icon, height),
+        x: sprite-attr($icon, backgroundX),
+        y: sprite-attr($icon, backgroundY)
     );
 
     @return $attr;
@@ -57,14 +57,10 @@ $sprite: map-get($icons, sprite) !default;
 }
 
 %sprite {
-    background-image: url(map-get($sprite, svgPath));
+    background-image: url(map-get($sprite, svgPath) + '?v=' + map-get($sprite, version));
     background-repeat: no-repeat;
     background-size: map-get($sprite, width) map-get($sprite, height);
     display: inline-block;
-}
-
-%ie-sprite {
-    background-image: url(map-get($sprite, pngPath));
 }
 
 @mixin svg-sprite($icon, $size: null) {
@@ -75,15 +71,15 @@ $sprite: map-get($icons, sprite) !default;
     $icon-map: icon-attr($icon);
     $icon-width: map-get($icon-map, width);
     $icon-height: map-get($icon-map, height);
-    $icon-pos-x: map-get($icon-map, x);
-    $icon-pos-y: map-get($icon-map, y);
+    $icon-pos-x: map-get($icon-map, x) - 4; // -4px because offset is set to 4px (see gulpfile.js SVG sprite configuration (padding: 4)), to avoid overlapping
+    $icon-pos-y: map-get($icon-map, y) - 4; // -4px because offset is set to 4px (see gulpfile.js SVG sprite configuration (padding: 4)), to avoid overlapping
 
-    @if($size){
+    @if ($size) {
 
         $unit: unit($size);
         $ratio: get-ratio($icon-width, $icon-height);
 
-        @if($unit == 'px'){
+        @if ($unit == 'px') {
 
             $scale: get-scale($icon-width, $size);
 
@@ -96,7 +92,7 @@ $sprite: map-get($icons, sprite) !default;
             background-size: ($sprite-width * $scale) ($sprite-height * $scale);
         }
 
-        @if($unit == 'em'){
+        @if ($unit == 'em') {
 
             $icon-width: parse-int(px-to-em($icon-width)) * parse-int($size) + em;
             $icon-height: parse-int(px-to-em($icon-height)) * parse-int($size) + em;
@@ -111,22 +107,28 @@ $sprite: map-get($icons, sprite) !default;
 
         }
 
-        @if($unit == '%'){
+        @if ($unit == '%') {
             @warn 'SVG Icons - values in percentages are not supported';
         }
 
     }
 
     @extend %sprite;
-    width: $icon-width;
-    height: $icon-height;
     background-position: $icon-pos-x $icon-pos-y;
+    height: $icon-height;
+    width: $icon-width;
 
     // Add IE fallback
     // Works with icons with default size ONLY
     @if $ie-sprite {
-        #{$ie-sprite} & {
-            @extend %ie-sprite;
+        @at-root {
+            // sass-lint:disable no-vendor-prefixes
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                & {
+                    background-image: url(map-get($sprite, pngPath) + '?v=' + map-get($sprite, version));
+                }
+            }
         }
     }
 }
+

@@ -3,7 +3,7 @@ module.exports = function (done) {
         runSequence = require("run-sequence").use(gulp);
 
     return runSequence(
-        "check-deps",
+        "clean",
         "prepare-assets",
         "prepare-config",
         "clear-image-cache",
@@ -11,6 +11,7 @@ module.exports = function (done) {
         "watch-htmlrender",
         "watch-svg",
         "watch-images-optimize",
+        "live-server",
         done
     );
 };
