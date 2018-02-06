@@ -28,7 +28,7 @@ Switch to right node version using [nvm](https://github.com/creationix/nvm). (Wh
 
     $ nvm use [version number from .nvmrc file]
 
-Inside projects folder install dependencies from package.json:
+Inside project folder install dependencies from package.json:
 
     $ npm i
 
