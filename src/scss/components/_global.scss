@@ -1,0 +1,69 @@
+//
+// Global element rules
+//
+// Elements, that needs to be styled globally, should be styled here.
+// Only native html elements/selectors should be here, if you have class styled in this file - consider separating it to another file.
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+
+    // To prevent the iPhone and iPad from inflating fonts
+    @include respond-to(1024, max) {
+        -webkit-text-size-adjust: 100%; // sass-lint:disable-line no-vendor-prefixes
+    }
+}
+
+[disabled] {
+    cursor: not-allowed;
+}
+
+ul {
+
+}
+
+ol {
+
+}
+
+figure {
+
+}
+
+strong {
+
+}
+
+em {
+
+}
+
+p {
+
+}
+
+hr {
+
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+
+}
+
+table {
+    //border-collapse: collapse;
+    //table-layout: fixed;
+    width: 100%;
+}

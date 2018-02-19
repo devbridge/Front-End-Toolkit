@@ -1,0 +1,148 @@
+@mixin respond-to($size, $dir) {
+    @if ($size == retina) {
+        // sass-lint:disable-block no-vendor-prefixes
+        @media only screen and (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+            @content;
+        }
+    } @else if ($size and $dir) {
+        @media screen and (#{$dir}-width: ($size + px)) {
+            @content;
+        }
+    }
+}
+
+@mixin vertical-align($block: inline-block, $align: middle) {
+    display: $block;
+    vertical-align: $align;
+}
+
+// Mixin for removing white spaces of inline-block
+@mixin remove-whitespace($apply-to: none, $setsize: $base-font-size) {
+    @if ($apply-to == none) {
+        font-size: 0;
+    } @else if ($apply-to == all) {
+        font-size: 0;
+
+        > * {
+            font-size: $setsize;
+        }
+    } @else {
+        font-size: 0;
+
+        #{$apply-to} {
+            font-size: $setsize;
+        }
+    }
+}
+
+@mixin clearfix($extend: true) {
+    @if $extend {
+        @extend %clearfix;
+    } @else {
+        &::after {
+            clear: both;
+            content: '';
+            display: table;
+            height: 0;
+        }
+    }
+}
+
+%clearfix {
+    @include clearfix($extend: false);
+}
+
+%hidden {
+    display: none;
+    visibility: hidden;
+}
+
+%visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    // Extends the .visuallyhidden class to allow the element to be focusable
+    // when navigated to via the keyboard: h5bp.com/p
+    &.focusable {
+        &:focus,
+        &:active {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+    }
+}
+
+// SUSY HELPER: helps to set clear: left to first in row, and remove margin for last in row
+@mixin cols-in-row($number, $reset: false, $last-flow: to) {
+    clear: none;
+
+    @if(not($reset)) {
+        &:nth-of-type(#{$number}n) {
+            @if ($last-flow == to) {
+                @include last;
+            } @else {
+                margin-right: 0;
+            }
+        }
+
+        &:nth-of-type(#{$number}n + 1) {
+            clear: left;
+        }
+    } @else {
+        &:nth-of-type(#{$number}n) {
+            float: left;
+            margin-right: gutter();
+        }
+
+        &:nth-of-type(#{$number}n + 1) {
+            clear: none;
+        }
+    }
+}
+
+// TABLE HELPER Basic styles for table element
+@mixin table() {
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    vertical-align: middle;
+    width: 100%;
+}
+
+// Resets default styling for list elements (<ul>, <ol>)
+@mixin reset-list-style {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Overrides default Bourbon ellipsis mixin, added display and white-space variables
+@mixin ellipsis($width: 100%, $display: inline-block, $white-space: nowrap) {
+    display: $display;
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: $white-space;
+    word-wrap: normal;
+}
+
+
+
+
+
+

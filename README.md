@@ -1,46 +1,52 @@
-# **Front-End Toolkit** #
-This project is a collections of resources, best practices and tools for front-end developers. Is made to help unify workflow and standardize the code inside our team.
+# Front End Toolkit
 
 ## Starter Template ##
-To ease setup process of the new project we have created a starter template which contains:
+This project is a set of best practices, which will allow you to start project quickly, non depending from any javascript framework.
+Features, that are already here:
+*  Recommended Sass structure with good practices from our team.
+*  Live server with auto reload feature.
+*  Sass linting integration and configuration. 
+*  Automated svg spriting.
+*  Automated image optimization.
+*  Recommended structure for HTML layout.
+*  Automated Html linting task.
+*  Automated accessibility check with generated reports.
+*  Pre-commit hooks, to keep project "clean".
+*  Component based development approach, which will help to transfer code on whatever front-end framework you want or just use it as a plain HTML site generator.
+*  Prepared code higiene tools, like editor config, nvmrc, npmrc files, and small things, like npm scripts.
 
-* Javascript files structure including following plugins:
-    * JS loader - [require.js](http://requirejs.org/)
-    * Modal window - [jquery.modal.js](https://www.devbridge.com/sourcery/components/jquery-modal/)
-    * Slider - [slick.js](http://kenwheeler.github.io/slick/)
-    * Form validation - [jquery.validate](http://jqueryvalidation.org/)
-* Sass files structure including following components:
-    * Image sprites
-    * CSS normalizer
-    * Default styles for:
-        * Form elements
-        * Modal window
-        * Table elements
-* Automated Gulp tasks:
-    * gulp-sass - [npmjs.com/package/gulp-sass](https://www.npmjs.com/package/gulp-sass)
-    * gulp-svg-sprite - [npmjs.com/package/gulp-svg-sprite](https://www.npmjs.com/package/gulp-svg-sprite)
+In development:
+*  HTML components with basic styling, states and best accessibility practices.
+*  More detailed instructions and explanations, why we are doing things in this way.
 
+## Installation
 
-To install template:
+To setup new project clone this repo:
 
-* Copy files to your project directory
-* In the command line navigate to your project directory and run `npm install`.
-* Run Gulp task `watch-all`.
+    $ git clone https://github.com/devbridge/Front-End-Toolkit.git
 
-_Note: we use [npm package manager](https://www.npmjs.com/) to manage our modules and [Gulp](http://gulpjs.com/) to run automated tasks. Also, to use npm manager you must have [Node.js](https://nodejs.org/) installer on your machine._
+Switch to right node version using [nvm](https://github.com/creationix/nvm). (Which node version is required defined in [.nvmrc](https://github.com/devbridge/Front-End-Toolkit/blob/v2-dev/.nvmrc) file):
+
+    $ nvm use [version number from .nvmrc file]
+
 
 ## Wiki ##
 A collection of resources, useful tools and technologies for front-end web development.
 
-* **[Front-End Bible](https://github.com/devbridge/Front-End-Toolkit/wiki/Front-End-Bible)** - _Set of rules for front-end developer._
-* **[Tools for Work](https://github.com/devbridge/Front-End-Toolkit/wiki/Tools-For-Work)** - _A list of tools that makes our life easier._
-* **[Plugins](https://github.com/devbridge/Front-End-Toolkit/wiki/Plugins)** - _Mostly Javascript libraries that proved their importance._
-* **[Styleguide](https://github.com/devbridge/Styleguide)** - _The latest and greatest style guide page._
-* **[Accessibility Guidance](https://github.com/devbridge/Front-End-Toolkit/wiki/Accessibility-guidance)** - _Let’s make a Web more accessible._
-* **[Layout Samples](https://github.com/devbridge/Front-End-Toolkit/wiki/Layout-samples)** - _HTML layouts samples_
-* **[Resources](https://github.com/devbridge/Front-End-Toolkit/wiki/Front-end-resources-list)** - _Hand picked resources for Front-end developer_
+
+Inside project folder install dependencies from package.json:
+
+    $ npm i
+
+To start developing run npm script command:
+
+    $ npm run start
+
+It will start all development tasks: prepare assets, compile html and css, bundle javascript and add file watchers.
+
+Now you can configure your project.
 
 
-This project is brought you by: [Devbridge Group](https://www.devbridge.com/) 
+## License
 
-[![Analytics](https://ga-beacon.appspot.com/UA-73039601-1/Front-End-Toolkit/readme)](https://github.com/igrigorik/ga-beacon)
+The MIT License (MIT).
