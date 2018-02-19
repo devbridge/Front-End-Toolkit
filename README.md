@@ -29,11 +29,6 @@ Switch to right node version using [nvm](https://github.com/creationix/nvm). (Wh
 
     $ nvm use [version number from .nvmrc file]
 
-
-## Wiki ##
-A collection of resources, useful tools and technologies for front-end web development.
-
-
 Inside project folder install dependencies from package.json:
 
     $ npm i
