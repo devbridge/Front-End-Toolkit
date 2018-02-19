@@ -1,5 +1,6 @@
 # Front End Toolkit
 
+## Starter Template ##
 This project is a set of best practices, which will allow you to start project quickly, non depending from any javascript framework.
 Features, that are already here:
 *  Recommended Sass structure with good practices from our team.
@@ -27,6 +28,11 @@ To setup new project clone this repo:
 Switch to right node version using [nvm](https://github.com/creationix/nvm). (Which node version is required defined in [.nvmrc](https://github.com/devbridge/Front-End-Toolkit/blob/v2-dev/.nvmrc) file):
 
     $ nvm use [version number from .nvmrc file]
+
+
+## Wiki ##
+A collection of resources, useful tools and technologies for front-end web development.
+
 
 Inside project folder install dependencies from package.json:
 
