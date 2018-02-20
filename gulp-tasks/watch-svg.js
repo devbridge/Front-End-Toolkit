@@ -3,8 +3,6 @@ module.exports = function () {
 		config = require('../gulp.config.js')();
 
 	return gulp.watch(config.svg.sourceFolder + '**/*.svg', function () {
-		// Create SVG sprite
-		require('gulp-task-loader')('gulp/create-svg-sprite');
-		gulp.start('create-svg-sprite');
+		return gulp.watch(config.svg.sourceFolder + '**/*.svg', ['create-svg-sprite']);
 	});
 };
