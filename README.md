@@ -13,7 +13,7 @@ Features, that are already here:
 *  Automated accessibility check with generated reports.
 *  Pre-commit hooks, to keep project "clean".
 *  Component based development approach, which will help to transfer code on whatever front-end framework you want or just use it as a plain HTML site generator.
-*  Prepared code higiene tools, like editor config, nvmrc, npmrc files, and small things, like npm scripts.
+*  Prepared code hygiene tools, like editor config, nvmrc, npmrc files, and small things, like npm scripts.
 
 In development:
 *  HTML components with basic styling, states and best accessibility practices.
