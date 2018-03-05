@@ -71,7 +71,7 @@ module.exports = function () {
             css: {},
             js: {},
             images: {
-                src: `${app}/assets/images/**/*.{png,gif,jpg,svg}`,
+                src: `${app}/content/images/**/*.{png,gif,jpg,svg}`,
                 dest: `${distFolder}/images/`,
                 options: {                       // Target options
                     optimizationLevel: 7,
