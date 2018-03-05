@@ -1,16 +1,10 @@
 module.exports = function() {
     var gulp = require('gulp'),
         config = require('../gulp.config.js')(),
-        plumber = require('gulp-plumber'),
         sass = require('gulp-sass'),
         sourcemaps = require('gulp-sourcemaps'),
         csso = require('gulp-csso'),
         autoprefixer = require('gulp-autoprefixer');
-
-    var options = {
-        outputStyle: 'nested', // 'compressed'
-        sourceComments: false
-    };
 
     function swallowError(error) {
         // If you want details of the error in the console
