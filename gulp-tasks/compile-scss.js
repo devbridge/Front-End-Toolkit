@@ -3,14 +3,11 @@ module.exports = function() {
         config = require('../gulp.config.js')(),
         plumber = require('gulp-plumber'),
         sass = require('gulp-sass'),
-        bourbon = require('bourbon').includePaths,
         sourcemaps = require('gulp-sourcemaps'),
-        neat = require('node-neat').includePaths,
         csso = require('gulp-csso'),
         autoprefixer = require('gulp-autoprefixer');
 
     var options = {
-        includePaths: neat,
         outputStyle: 'nested', // 'compressed'
         sourceComments: false
     };
@@ -27,7 +24,7 @@ module.exports = function() {
             outputStyle: 'expanded',
             sourceMap: true,
             noCache: false,
-            includePaths: [].concat(neat, bourbon, config.tmp)
+            includePaths: [].concat(config.tmp)
         }))
         .on('error', swallowError)
         .pipe(csso())

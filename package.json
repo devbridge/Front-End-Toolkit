@@ -9,7 +9,6 @@
     "main": "gulpfile.js",
     "dependencies": {
         "autoprefixer": "7.1.1",
-        "bourbon": "4.3.4",
         "check-dependencies": "1.0.1",
         "gulp": "3.9.1",
         "gulp-clean": "0.4.0",
@@ -31,14 +30,12 @@
         "gulp-task-loader": "1.2.1",
         "gulp-uglify": "3.0.0",
         "gulp-watch": "4.3.11",
-        "node-bourbon": "4.2.8",
         "yargs": "4.8.1",
         "event-stream": "3.3.4",
         "gulp-accessibility": "3.0.1",
         "gulp-eslint": "3.0.1",
         "gulp-htmlhint": "0.3.1",
         "gulp-htmlrender": "0.3.0",
-        "node-neat": "2.0.0-beta.0",
         "run-sequence": "1.2.2"
     },
     "scripts": {
