@@ -42,7 +42,8 @@
         "run-sequence": "1.2.2"
     },
     "scripts": {
-        "start": "gulp develop"
+        "start": "gulp develop-plain",
+        "start-safe": "gulp develop-safe"
     },
     "author": "",
     "license": "ISC",
