@@ -36,6 +36,9 @@ Inside project folder install dependencies from package.json:
 To start developing run npm script command:
 
     $ npm run start
+Or launch command with "check-dependencies" mode, which will check if all needed dependencies are installed:
+
+    $ npm run start-safe
 
 It will start all development tasks: prepare assets, compile html and css, bundle javascript and add file watchers.
 
