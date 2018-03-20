@@ -1,7 +1,7 @@
 # Front End Toolkit
 
 ## Starter Template ##
-This project is a set of best practices brought to you by the team at [Devbridge Group.](https://www.devbridge.com/), which will allow you to start project quickly, non depending from any javascript framework.
+This project is a set of best practices brought to you by the team at [Devbridge Group.](https://www.devbridge.com/articles/the-power-of-our-new-front-end-toolkit/), which will allow you to start project quickly, non depending from any javascript framework.
 Features, that are already here:
 *  Recommended Sass structure with good practices from our team.
 *  Live server with auto reload feature.
