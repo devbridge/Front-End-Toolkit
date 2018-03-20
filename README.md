@@ -1,4 +1,4 @@
-# Front End Toolkit [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Front-end%20boilerplate%20with%20lots%20of%20automatization%204&url=https://www.devbridge.com/articles/the-power-of-our-new-front-end-toolkit/&via=devbridge&hashtags=front-end,boilerplate,sass,automated,accessibility,webdev,css)
+# Front End Toolkit [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Front-end%20boilerplate%20with%20lots%20of%20automatization%20&url=https://www.devbridge.com/articles/the-power-of-our-new-front-end-toolkit/&via=devbridge&hashtags=front-end,html,sass,automated,accessibility,webdev,css)
 
 ## Starter Template ##
 This project is a set of best practices brought to you by the team at [Devbridge Group.](https://www.devbridge.com/articles/the-power-of-our-new-front-end-toolkit/), which will allow you to start project quickly, non depending from any javascript framework.
