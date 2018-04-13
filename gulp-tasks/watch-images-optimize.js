@@ -1,6 +1,10 @@
-module.exports = function () {
-	var gulp = require('gulp'),
-		config = require('../gulp.config.js')();
+const gulp = require('gulp'),
+    runSequence = require('run-sequence').use(gulp),
+    config = require('../gulp.config.js')();
 
-	gulp.watch(config.optimize.images.src, ['image-optimization']);
+module.exports = function () {
+    gulp.watch(
+        config.optimize.images.src,
+        () => runSequence('image-optimization', 'live-reload')
+    );
 };

@@ -1,6 +1,10 @@
-module.exports = function () {
-	var gulp = require('gulp'),
-		config = require('../gulp.config.js')();
+const gulp = require('gulp'),
+    runSequence = require('run-sequence').use(gulp),
+    config = require('../gulp.config.js')();
 
-    gulp.watch(config.html.src, ['html-render']);
+module.exports = function () {
+    gulp.watch(
+        config.html.src,
+        () => runSequence('html-render', 'live-reload')
+    );
 };
