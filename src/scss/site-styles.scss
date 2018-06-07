@@ -17,17 +17,16 @@
 
 // Plugins - Styles of third party plugins
 // Global modules - modules shared between multiple projects (e.g. admin and public sites)
-@import './src/components/notifications/notifications',
-'./src/components/form-elements/index';
+@import '../components/notifications/notifications',
+'../components/form-elements/index';
 
 // Local modules
 @import 'components/headings';
 
 // Components
 @import 'components/helpers',
-'./src/components/header/header',
-'./src/components/footer/footer';
+'../components/header/header',
+'../components/footer/footer';
 
 // Print stylesheet
 @import 'print';
-
