@@ -13,6 +13,7 @@ module.exports = function () {
             'clear-image-cache',
             'watch-scss',
             'watch-htmlrender',
+            'watch-scripts',
             'watch-svg',
             'watch-images-optimize',
             'live-server'

@@ -17,10 +17,10 @@
         "gulp-changed": "3.2.0",
         "gulp-clean": "0.4.0",
         "gulp-concat": "2.6.1",
-        "gulp-connect": "5.5.0",
+        "gulp-connect": "5.6.1",
         "gulp-csso": "3.0.1",
         "gulp-eslint": "4.0.2",
-        "gulp-htmlhint": "2.1.0",
+        "gulp-htmlhint": "2.2.1",
         "gulp-htmlrender": "0.3.0",
         "gulp-if": "2.0.2",
         "gulp-ignore": "2.0.2",
@@ -34,11 +34,11 @@
         "gulp-task-loader": "1.4.4",
         "gulp-uglify": "3.0.0",
         "gulp-watch": "5.0.0",
-        "yargs": "11.0.0",
-        "run-sequence": "2.2.1"
+        "run-sequence": "2.2.1",
+        "yargs": "11.0.0"
     },
     "scripts": {
-        "start": "gulp develop-plain",
+        "start": "gulp develop-plain ",
         "start-safe": "gulp develop-safe"
     },
     "author": "",
@@ -48,6 +48,21 @@
     },
     "homepage": "https://github.com/devbridge/Front-End-Toolkit",
     "devDependencies": {
-        "check-dependencies": "1.1.0"
+        "@babel/core": "7.1.5",
+        "@babel/preset-env": "7.1.5",
+        "@babel/preset-es2015": "7.0.0-beta.53",
+        "babel-eslint": "10.0.1",
+        "babel-loader": "8.0.4",
+        "check-dependencies": "1.1.0",
+        "eslint": "^4.16.0",
+        "eslint-config-airbnb": "16.1.0",
+        "eslint-loader": "^1.9.0",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jsx-a11y": "6.1.2",
+        "eslint-plugin-lodash": "3.1.0",
+        "eslint-plugin-react": "7.11.1",
+        "gulp-babel": "8.0.0-beta.2",
+        "webpack": "^3.10.0",
+        "webpack-stream": "^4.0.0"
     }
 }

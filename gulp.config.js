@@ -9,7 +9,6 @@ module.exports = function () {
 
     const distFolder = "dist";
 
-
     const tmp = "tmp/";
     const svg = {
         sourceFolder: `${app}/scss/assets/icons/`,
@@ -21,6 +20,8 @@ module.exports = function () {
     const config = {
         tmp,
         root: "./",
+        src: "src",
+        dist: "dist",
         packages: [
             "./package.json"
         ],
@@ -29,11 +30,16 @@ module.exports = function () {
         },
         path: {
             HTML: "/index.html",
-            ALL: [`${app}/src/main.js`],
+            ENTRY: '/scripts/main.js',
+            ALL: [
+                `${app}/scripts/**/*.js`,
+                `${app}/components/**/*.js`
+            ],
             MINIFIED_OUT: "build.min.js",
+            SRC: "scripts",
             DEST_SRC: "scripts",
             DEST_BUILD: "scripts",
-            DEST: distFolder
+            DEST: `${distFolder}/content/scripts/`
         },
         environmentConfig: {
             source: `config/${environment}.js`
