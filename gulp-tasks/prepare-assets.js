@@ -1,10 +1,12 @@
 module.exports = function (done) {
-    var runSequence = require('run-sequence');
+    const runSequence = require('run-sequence');
 
     return runSequence('image-optimization',
+        'copy-favicons',
         'create-svg-sprite',
         'scss-linting',
         'compile-scss',
+        'compile-scripts',
         'html-render',
         done);
 };

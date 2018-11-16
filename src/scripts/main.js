@@ -1,1 +1,1 @@
-import article from '../components/article';
+import article from '@components/article';

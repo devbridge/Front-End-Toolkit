@@ -15,13 +15,13 @@ module.exports = function () {
         spriteFolder: `${distFolder}/content/styles/images/`,
         scssMapFolder: `${app}/scss/base/`,
         scssTemplateFolder: `${app}/scss/base/`,
-        pngFallback: true
+        pngFallback: false
     };
     const config = {
         tmp,
         root: "./",
         src: "src",
-        dist: "dist",
+        dist: distFolder,
         packages: [
             "./package.json"
         ],
@@ -39,7 +39,9 @@ module.exports = function () {
             SRC: "scripts",
             DEST_SRC: "scripts",
             DEST_BUILD: "scripts",
-            DEST: `${distFolder}/content/scripts/`
+            DEST: `${distFolder}/content/scripts/`,
+            FAVICONS_SRC: `${app}/content/favicons/*`,
+            FAVICONS_DIST: `${distFolder}/content/favicons/`
         },
         environmentConfig: {
             source: `config/${environment}.js`
@@ -71,8 +73,7 @@ module.exports = function () {
                 `!./${app}/scss/base/_svg-sprite-map.scss`
             ],
             cssFolder: `${distFolder}/content/styles/`
-        }
-        ,
+        },
         optimize: {
             css: {},
             js: {},

@@ -1,6 +1,6 @@
 module.exports = function (done) {
-    let gulp = require('gulp'),
-        runSequence = require('run-sequence').use(gulp);
+    const gulp = require('gulp');
+    const runSequence = require('run-sequence').use(gulp);
 
     return runSequence(
         'check-deps',

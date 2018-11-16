@@ -1,1 +1,1 @@
-console.log('article');
+console.log('article scriptai');

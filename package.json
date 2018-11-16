@@ -8,7 +8,7 @@
     "description": "Starter project",
     "main": "gulpfile.js",
     "dependencies": {
-        "autoprefixer": "8.1.0",
+        "autoprefixer": "9.3.1",
         "event-stream": "3.3.4",
         "gulp": "3.9.1",
         "gulp-accessibility": "3.1.1",
@@ -26,14 +26,14 @@
         "gulp-ignore": "2.0.2",
         "gulp-imagemin": "4.1.0",
         "gulp-plumber": "1.2.0",
-        "gulp-sass": "3.1.0",
+        "gulp-sass": "4.0.2",
         "gulp-sass-lint": "1.3.4",
         "gulp-sourcemaps": "2.6.4",
-        "gulp-svg-sprite": "1.3.7",
+        "gulp-svg-sprite": "1.5.0",
         "gulp-svg2png": "2.0.2",
         "gulp-task-loader": "1.4.4",
         "gulp-uglify": "3.0.0",
-        "gulp-watch": "5.0.0",
+        "gulp-watch": "5.0.1",
         "run-sequence": "2.2.1",
         "yargs": "11.0.0"
     },
@@ -50,19 +50,18 @@
     "devDependencies": {
         "@babel/core": "7.1.5",
         "@babel/preset-env": "7.1.5",
-        "@babel/preset-es2015": "7.0.0-beta.53",
         "babel-eslint": "10.0.1",
         "babel-loader": "8.0.4",
         "check-dependencies": "1.1.0",
-        "eslint": "^4.16.0",
-        "eslint-config-airbnb": "16.1.0",
-        "eslint-loader": "^1.9.0",
-        "eslint-plugin-import": "^2.8.0",
+        "eslint": "5.9.0",
+        "eslint-config-airbnb": "17.1.0",
+        "eslint-loader": "2.1.1",
+        "eslint-plugin-import": "2.14.0",
         "eslint-plugin-jsx-a11y": "6.1.2",
         "eslint-plugin-lodash": "3.1.0",
         "eslint-plugin-react": "7.11.1",
         "gulp-babel": "8.0.0-beta.2",
-        "webpack": "^3.10.0",
-        "webpack-stream": "^4.0.0"
+        "webpack": "4.25.1",
+        "webpack-stream": "5.1.1"
     }
 }

@@ -1,6 +1,6 @@
-const gulp = require('gulp'),
-    connect = require('gulp-connect'),
-    config = require('../gulp.config.js')();
+const gulp = require('gulp');
+const connect = require('gulp-connect');
+const config = require('../gulp.config.js')();
 
 module.exports = function () {
     gulp.src(
