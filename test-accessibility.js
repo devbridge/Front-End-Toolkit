@@ -63,7 +63,8 @@ async function runExample() {
 
         const testableUrls = [
             '/',
-            '/approach/'
+            '/approach/',
+            '/contact-us/'
         ];
 
         for (let index = 0; index < testableUrls.length; index++) {
