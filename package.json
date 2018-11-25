@@ -35,11 +35,14 @@
         "gulp-uglify": "3.0.0",
         "gulp-watch": "5.0.0",
         "yargs": "11.0.0",
-        "run-sequence": "2.2.1"
+        "run-sequence": "2.2.1",
+        "pa11y": "5.0.4",
+        "pa11y-reporter-html": "1.0.0"
     },
     "scripts": {
         "start": "gulp develop-plain",
-        "start-safe": "gulp develop-safe"
+        "start-safe": "gulp develop-safe",
+        "test-wcag": "node test-accessibility.js"
     },
     "author": "",
     "license": "ISC",
