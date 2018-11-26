@@ -85,7 +85,6 @@ async function runExample() {
                     accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
                     host: hostName
                 },
-                //screenCapture: `./accessibility/screen${index}.png`,
                 page: pages[index]
             });
 
