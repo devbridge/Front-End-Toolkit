@@ -4,7 +4,7 @@
 const pa11y = require('pa11y');
 const htmlReporter = require('pa11y-reporter-html');
 const puppeteer = require('puppeteer');
-var fs = require('fs');
+const fs = require('fs');
 
 const reportsPath = 'reports/';
 
