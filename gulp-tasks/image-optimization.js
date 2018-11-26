@@ -1,5 +1,5 @@
 module.exports = function () {
-    var imagemin = require('gulp-imagemin'),
+    const imagemin = require('gulp-imagemin'),
         cache = require('gulp-cache'),
         gulp = require('gulp'),
         imageminPngquant = require('imagemin-pngquant'),
