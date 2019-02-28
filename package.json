@@ -45,7 +45,7 @@
     },
     "scripts": {
         "start": "gulp develop-plain ",
-        "start-safe": "gulp develop-safe"
+        "start-safe": "gulp develop-safe",
         "test-wcag": "node test-accessibility.js"
     },
     "author": "",
