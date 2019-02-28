@@ -1,12 +1,12 @@
 module.exports = function () {
-    const imagemin = require('gulp-imagemin'),
-        cache = require('gulp-cache'),
-        gulp = require('gulp'),
-        imageminPngquant = require('imagemin-pngquant'),
-        imageminZopfli = require('imagemin-zopfli'),
-        imageminMozjpeg = require('imagemin-mozjpeg'), //need to run 'brew install libpng'
-        imageminGiflossy = require('imagemin-giflossy'),
-        config = require('../gulp.config.js')();
+    const imagemin = require('gulp-imagemin');
+    const cache = require('gulp-cache');
+    const gulp = require('gulp');
+    const config = require('../gulp.config.js')();
+    const imageminPngquant = require('imagemin-pngquant');
+    const imageminZopfli = require('imagemin-zopfli');
+    const imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
+    const imageminGiflossy = require('imagemin-giflossy');
 
     return gulp.src(config.optimize.images.src)
         .pipe(cache(imagemin([

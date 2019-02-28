@@ -1,7 +1,7 @@
 module.exports = function () {
-	let access = require('gulp-accessibility'),
-		gulp = require('gulp'),
-		config = require('../gulp.config.js')();
+    const access = require('gulp-accessibility');
+    const gulp = require('gulp');
+    const config = require('../gulp.config.js')();
 
     return gulp.src(config.html.src)
         .pipe(access({

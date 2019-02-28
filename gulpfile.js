@@ -1,10 +1,9 @@
-var gulp = require('gulp'),
-    config = require('./gulp.config.js')();
+const gulp = require('gulp');
 
 // Load all tasks from gulp-tasks folder
 
-gulp.task("develop-safe", function () {
-    return require("check-dependencies")({
+gulp.task('develop-safe', function () {
+    return require('check-dependencies')({
         install: true,
         verbose: true
     }, function () {
@@ -14,9 +13,8 @@ gulp.task("develop-safe", function () {
     });
 });
 
-gulp.task("develop-plain", function () {
+gulp.task('develop-plain', function () {
     require('gulp-task-loader')();
 
     return gulp.start('develop');
 });
-

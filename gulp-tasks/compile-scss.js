@@ -1,10 +1,10 @@
 module.exports = function() {
-    var gulp = require('gulp'),
-        config = require('../gulp.config.js')(),
-        sass = require('gulp-sass'),
-        sourcemaps = require('gulp-sourcemaps'),
-        csso = require('gulp-csso'),
-        autoprefixer = require('gulp-autoprefixer');
+    const gulp = require('gulp');
+    const config = require('../gulp.config.js')();
+    const sass = require('gulp-sass');
+    const sourcemaps = require('gulp-sourcemaps');
+    const csso = require('gulp-csso');
+    const autoprefixer = require('gulp-autoprefixer');
 
     function swallowError(error) {
         // If you want details of the error in the console

@@ -5,7 +5,7 @@ module.exports = function () {
     const config = require('../gulp.config.js')();
 
     watch(
-        config.optimize.images.src,
-        () => runSequence('image-optimization', 'live-reload')
+        config.path.ALL,
+        () => runSequence('compile-scripts', 'live-reload')
     );
 };

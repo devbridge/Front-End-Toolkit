@@ -1,10 +1,10 @@
 module.exports = function (done) {
-    var gulp = require('gulp'),
-        runSequence = require('run-sequence').use(gulp),
-        plumber = require('gulp-plumber'),
-        svg2png = require('gulp-svg2png'),
-        config = require('../gulp.config.js')(),
-        svgSprite = require('gulp-svg-sprite');
+    const gulp = require('gulp');
+    const runSequence = require('run-sequence').use(gulp);
+    const plumber = require('gulp-plumber');
+    const svg2png = require('gulp-svg2png');
+    const config = require('../gulp.config.js')();
+    const svgSprite = require('gulp-svg-sprite');
 
     gulp.task('svg-sprite', function () {
         return gulp.src(config.svg.sourceFolder + '*.svg')

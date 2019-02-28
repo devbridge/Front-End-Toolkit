@@ -1,8 +1,7 @@
 module.exports = function () {
     const gulp = require('gulp');
-    const clean = require('gulp-clean');
     const config = require('../gulp.config.js')();
 
-    return gulp.src(config.dist, {read: false})
-        .pipe(clean());
+	return gulp.src(config.path.FAVICONS_SRC)
+		.pipe(gulp.dest(config.path.FAVICONS_DIST));
 };
