@@ -1,11 +1,8 @@
-module.exports = function () {
-    const gulp = require('gulp');
-    const watch = require('gulp-watch');
-    const runSequence = require('run-sequence').use(gulp);
-    const config = require('../gulp.config.js')();
+const { series, watch } = require('gulp');
 
-    watch(
-        config.optimize.images.src,
-        () => runSequence('image-optimization', 'live-reload')
-    );
-};
+const config = require('../gulp.config.js')();
+
+module.exports = () => watch(
+    config.paths.images.src,
+    series('image-optimization', 'live-reload'),
+);

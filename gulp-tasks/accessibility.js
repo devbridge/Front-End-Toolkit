@@ -1,20 +1,11 @@
-module.exports = function () {
-    const access = require('gulp-accessibility');
-    const gulp = require('gulp');
-    const config = require('../gulp.config.js')();
+const access = require('gulp-accessibility');
+const { dest, src } = require('gulp');
+const logger = require('gulplog');
 
-    return gulp.src(config.html.src)
-        .pipe(access({
-            force: true,
-            reportLevels: {
-                notice: false,
-                warning: false,
-                error: true
-            },
-            browser: false,
-            accessibilityLevel: 'WCAG2A'
-        }))
-        .on('error', console.log)
-        .pipe(access.report({reportType: 'txt'}))
-        .pipe(gulp.dest('reports/txt'));
-};
+const config = require('../gulp.config.js')();
+
+module.exports = () => src(config.paths.accessibility.src)
+    .pipe(access(config.options.accessSniff))
+    .on('error', logger.error)
+    .pipe(access.report(config.options.accessSniffReport))
+    .pipe(dest(config.paths.accessibility.dist));

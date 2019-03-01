@@ -1,38 +1,35 @@
-module.exports = function (done) {
-    const gulp = require('gulp');
-    const runSequence = require('run-sequence').use(gulp);
-    const plumber = require('gulp-plumber');
-    const svg2png = require('gulp-svg2png');
-    const config = require('../gulp.config.js')();
-    const svgSprite = require('gulp-svg-sprite');
+const { dest, src, series } = require('gulp');
+const plumber = require('gulp-plumber');
+const raster = require('gulp-raster-update');
+const rename = require('gulp-rename');
+const svgSprite = require('gulp-svg-sprite');
+const logger = require('gulplog');
 
-    gulp.task('svg-sprite', function () {
-        return gulp.src(config.svg.sourceFolder + '*.svg')
-            .pipe(plumber({
-                errorHandler: function (err) {
-                    console.log(err);
-                    this.emit('end');
-                }
-            }))
-            .pipe(svgSprite(config.svgConfig))
-            .pipe(gulp.dest('./'));
-    });
+const config = require('../gulp.config.js')();
 
-    gulp.task('png-sprite', function () {
-        return gulp.src(config.svg.spriteFolder + '*.svg')
-            .pipe(plumber({
-                errorHandler: function () {
-                    console.log(err);
-                    this.emit('end');
-                }
-            }))
-            .pipe(svg2png())
-            .pipe(gulp.dest(config.svg.spriteFolder));
-    });
+const createSvgSprite = cb => src(config.paths.sprite.src)
+    .pipe(plumber({
+        errorHandler: (err) => {
+            logger.error.log(err);
+            this.emit('end');
+        },
+    }))
+    .pipe(svgSprite(config.options.svgSprite))
+    .pipe(dest(config.paths.root));
 
-    if (config.svg.pngFallback) {
-        runSequence('svg-sprite', 'png-sprite', done);
-    } else {
-        runSequence('svg-sprite', done);
-    }
-};
+const createPngSprite = cb => src(config.paths.sprite.src)
+    .pipe(plumber({
+        errorHandler: (err) => {
+            logger.error.log(err);
+            this.emit('end');
+        },
+    }))
+    .pipe(raster())
+    .pipe(rename({ extname: '.png' }))
+    .pipe(dest(config.paths.sprite.dist));
+
+if (config.enable.pngFallback) {
+    module.exports = series(createSvgSprite, createPngSprite);
+} else {
+    module.exports = series(createSvgSprite);
+}

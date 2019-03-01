@@ -1,49 +1,48 @@
-module.exports = function () {
-    const imagemin = require('gulp-imagemin');
-    const cache = require('gulp-cache');
-    const gulp = require('gulp');
-    const config = require('../gulp.config.js')();
-    const imageminPngquant = require('imagemin-pngquant');
-    const imageminZopfli = require('imagemin-zopfli');
-    const imageminMozjpeg = require('imagemin-mozjpeg'); //need to run 'brew install libpng'
-    const imageminGiflossy = require('imagemin-giflossy');
+const gulp = require('gulp');
+const cache = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
+const imageminGiflossy = require('imagemin-giflossy');
+const imageminMozjpeg = require('imagemin-mozjpeg'); // need to run 'brew install libpng'
+const imageminPngquant = require('imagemin-pngquant');
+const imageminZopfli = require('imagemin-zopfli');
 
-    return gulp.src(config.optimize.images.src)
-        .pipe(cache(imagemin([
-            //png
-            imageminPngquant({
-                speed: 1,
-                quality: 98 //lossy settings
-            }),
-            imageminZopfli({
-                more: true
-                // iterations: 50 // very slow but more effective
-            }),
-            //gif
-            // imagemin.gifsicle({
-            //     interlaced: true,
-            //     optimizationLevel: 3
-            // }),
-            //gif very light lossy, use only one of gifsicle or Giflossy
-            imageminGiflossy({
-                optimizationLevel: 3,
-                optimize: 3, //keep-empty: Preserve empty transparent frames
-                lossy: 2
-            }),
-            //svg
-            imagemin.svgo({
-                plugins: [{
-                    removeViewBox: false
-                }]
-            }),
-            //jpg lossless
-            imagemin.jpegtran({
-                progressive: true
-            }),
-            //jpg very light lossy, use vs jpegtran
-            imageminMozjpeg({
-                quality: 90
-            })
-        ])))
-        .pipe(gulp.dest(config.optimize.images.dest));
-};
+const config = require('../gulp.config.js')();
+
+module.exports = () => gulp
+    .src(config.paths.images.src)
+    .pipe(cache(imagemin([
+        /*
+        * PNG
+        * Reference: https://github.com/imagemin/imagemin-pngquant
+        */
+        imageminPngquant(config.options.pngquant),
+
+        /*
+        * Reference: https://github.com/imagemin/imagemin-zopfli
+        */
+        imageminZopfli(config.options.zopfli),
+
+        /*
+        * GIF
+        * Reference: https://github.com/jihchi/imagemin-giflossy
+        */
+        imageminGiflossy(config.options.giflossy),
+
+        /*
+        * SVG
+        * Reference: https://github.com/imagemin/imagemin-svgo
+        */
+        imagemin.svgo(config.options.svgo),
+
+        /*
+        * JPEG
+        * Reference: https://github.com/imagemin/imagemin-jpegtran
+        */
+        imagemin.jpegtran(config.options.jpegtran),
+
+        /*
+        * Reference: https://github.com/imagemin/imagemin-mozjpeg
+        */
+        imageminMozjpeg(config.options.mozjpeg),
+    ])))
+    .pipe(gulp.dest(config.paths.images.dist));

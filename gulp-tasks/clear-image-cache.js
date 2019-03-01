@@ -1,4 +1,3 @@
-module.exports = function (done) {
-	const cache = require('gulp-cache');
-	return cache.clearAll(done);
-};
+const cache = require('gulp-cache');
+
+module.exports = cb => cache.clearAll(cb);

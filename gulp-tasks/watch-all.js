@@ -1,10 +1,7 @@
-module.exports = function () {
-    const gulp = require('gulp');
+const { parallel } = require('gulp');
 
-    gulp.start([
-        'check-deps',
-        'watch-scss',
-        'watch-scripts',
-        'watch-svg'
-    ]);
-};
+module.exports = () => parallel(
+    'watch-scss',
+    'watch-scripts',
+    'watch-svg',
+);

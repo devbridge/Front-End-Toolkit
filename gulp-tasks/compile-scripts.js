@@ -1,12 +1,11 @@
-module.exports = function() {
-    const gulp = require('gulp');
-    const config = require('../gulp.config.js')();
-    const webpack = require('webpack-stream');
-    const webpackConfig = require('../webpack.config');
-    const plumber = require('gulp-plumber');
+const { dest, src } = require('gulp');
+const webpack = require('webpack-stream');
+const plumber = require('gulp-plumber');
 
-    return gulp.src(config.path.ENTRY)
-        .pipe(plumber())
-        .pipe(webpack(webpackConfig))
-        .pipe(gulp.dest(config.path.DEST));
-};
+const config = require('../gulp.config.js')();
+const webpackConfig = require('../webpack.config');
+
+module.exports = () => src(config.paths.scripts.entry)
+    .pipe(plumber())
+    .pipe(webpack(webpackConfig))
+    .pipe(dest(config.paths.scripts.dist));

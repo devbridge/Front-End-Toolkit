@@ -1,9 +1,6 @@
-module.exports = function () {
-    const htmlhint = require('gulp-htmlhint');
-    const gulp = require('gulp');
-    const config = require('../gulp.config.js')();
+const { src } = require('gulp');
+const htmlHint = require('gulp-htmlhint');
 
-    return gulp.src(config.html.src)
-        .pipe(htmlhint())
-        .pipe(htmlhint.reporter())
-};
+const config = require('../gulp.config.js')();
+
+module.exports = () => src(config.paths.html.src).pipe(htmlHint()).pipe(htmlHint.reporter());

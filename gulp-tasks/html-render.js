@@ -1,9 +1,8 @@
-module.exports = function () {
-    const gulp = require('gulp');
-    const htmlRender = require('gulp-htmlrender');
-    const config = require('../gulp.config.js')();
+const { dest, src } = require('gulp');
+const htmlRender = require('gulp-htmlrender');
 
-    return gulp.src(config.html.src, {read: false})
-        .pipe(htmlRender.render())
-        .pipe(gulp.dest('dist'));
-};
+const config = require('../gulp.config.js')();
+
+module.exports = () => src(config.paths.html.src, { read: false })
+    .pipe(htmlRender.render())
+    .pipe(dest(config.paths.html.dist));
