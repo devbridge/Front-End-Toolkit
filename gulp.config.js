@@ -23,6 +23,10 @@ module.exports = () => {
         src: `./${SRC_DIR}/**/*.html`,
     };
 
+    const clean = {
+        src: `${ROOT_DIR}${DIST_DIR}/**`,
+    };
+
     const env = {
         src: `config/${ENVIRONMENT}.js`,
     };
@@ -87,6 +91,7 @@ module.exports = () => {
 
     const paths = {
         accessibility,
+        clean,
         dist: DIST_DIR,
         env,
         favicons,
@@ -158,7 +163,7 @@ module.exports = () => {
 
     /* Reference: https://github.com/imagemin/imagemin-pngquant#options */
     const pngquant = {
-        quality: 98,
+        quality: [0.9, 0.9],
         speed: 1,
     };
 

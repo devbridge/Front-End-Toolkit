@@ -1,15 +1,13 @@
-const gulp = require('gulp');
+const { src } = require('gulp');
 const connect = require('gulp-connect');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => {
-    gulp
-        .src(
-            config.html.src,
-            config.paths.scss.src,
-            config.paths.images.src,
-            config.paths.sprite.src,
-        )
-        .pipe(connect.reload());
-};
+const liveReload = () => src(
+    config.paths.html.src,
+    config.paths.scss.src,
+    config.paths.images.src,
+    config.paths.sprite.src,
+).pipe(connect.reload());
+
+module.exports = liveReload;

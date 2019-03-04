@@ -1,3 +1,5 @@
 const cache = require('gulp-cache');
 
-module.exports = cb => cache.clearAll(cb);
+const clearImageCache = cb => cache.clearAll(cb);
+
+module.exports = clearImageCache;

@@ -2,7 +2,12 @@ const { series, watch } = require('gulp');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => watch(
+const compileScss = require('./compile-scss');
+const liveReload = require('./live-reload');
+
+const watchScss = () => watch(
     config.paths.scss.src,
-    series('compile-scss', 'live-reload'),
+    series(compileScss, liveReload),
 );
+
+module.exports = watchScss;

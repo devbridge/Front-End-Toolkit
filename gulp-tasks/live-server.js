@@ -2,4 +2,6 @@ const connect = require('gulp-connect');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => connect.server(config.options.liveServer);
+const liveServer = () => connect.server(config.options.liveServer);
+
+module.exports = liveServer;

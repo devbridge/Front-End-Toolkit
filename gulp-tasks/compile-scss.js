@@ -7,7 +7,7 @@ const sourcemaps = require('gulp-sourcemaps');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => {
+const compileScss = () => {
     function swallowError(error) {
         // If you want details of the error in the console
         logger.warn('\x1b[36m', error.toString(), '\x1b[0m');
@@ -24,3 +24,5 @@ module.exports = () => {
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.paths.scss.dist));
 };
+
+module.exports = compileScss;

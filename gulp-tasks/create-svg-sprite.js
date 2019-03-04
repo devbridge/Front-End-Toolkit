@@ -7,7 +7,7 @@ const logger = require('gulplog');
 
 const config = require('../gulp.config.js')();
 
-const createSvgSprite = cb => src(config.paths.sprite.src)
+const createSprite = () => src(config.paths.sprite.src)
     .pipe(plumber({
         errorHandler: (err) => {
             logger.error.log(err);
@@ -17,7 +17,7 @@ const createSvgSprite = cb => src(config.paths.sprite.src)
     .pipe(svgSprite(config.options.svgSprite))
     .pipe(dest(config.paths.root));
 
-const createPngSprite = cb => src(config.paths.sprite.src)
+const createPngFallback = () => src(config.paths.sprite.src)
     .pipe(plumber({
         errorHandler: (err) => {
             logger.error.log(err);
@@ -28,8 +28,7 @@ const createPngSprite = cb => src(config.paths.sprite.src)
     .pipe(rename({ extname: '.png' }))
     .pipe(dest(config.paths.sprite.dist));
 
-if (config.enable.pngFallback) {
-    module.exports = series(createSvgSprite, createPngSprite);
-} else {
-    module.exports = series(createSvgSprite);
-}
+const createSvgSprite = config.enable.pngFallback
+    ? series(createSprite, createPngFallback) : series(createSprite);
+
+module.exports = createSvgSprite;

@@ -3,7 +3,9 @@ const eslint = require('gulp-eslint');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => src(config.paths.scriptsLint.src)
+const lintScripts = () => src(config.paths.scriptsLint.src)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+
+module.exports = lintScripts;

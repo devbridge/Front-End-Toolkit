@@ -1,15 +1,14 @@
-const gulp = require('gulp');
+const { dest, src } = require('gulp');
 const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
 const imageminGiflossy = require('imagemin-giflossy');
-const imageminMozjpeg = require('imagemin-mozjpeg'); // need to run 'brew install libpng'
+const imageminMozjpeg = require('imagemin-mozjpeg'); // Need to run 'brew install libpng'
 const imageminPngquant = require('imagemin-pngquant');
 const imageminZopfli = require('imagemin-zopfli');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => gulp
-    .src(config.paths.images.src)
+const optimizeImages = () => src(config.paths.images.src)
     .pipe(cache(imagemin([
         /*
         * PNG
@@ -44,5 +43,9 @@ module.exports = () => gulp
         * Reference: https://github.com/imagemin/imagemin-mozjpeg
         */
         imageminMozjpeg(config.options.mozjpeg),
-    ])))
-    .pipe(gulp.dest(config.paths.images.dist));
+    ], {
+        name: 'images',
+    })))
+    .pipe(dest(config.paths.images.dist));
+
+module.exports = optimizeImages;

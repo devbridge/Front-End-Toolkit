@@ -2,7 +2,12 @@ const { series, watch } = require('gulp');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => watch(
+const createSvgSprite = require('./create-svg-sprite');
+const liveReload = require('./live-reload');
+
+const watchSvg = () => watch(
     config.paths.sprite.src,
-    series('create-svg-sprite', 'live-reload'),
+    series(createSvgSprite, liveReload),
 );
+
+module.exports = watchSvg;

@@ -3,4 +3,6 @@ const del = require('del');
 
 const config = require('../gulp.config.js')();
 
-module.exports = () => del(config.paths.dest);
+const clean = () => del(config.paths.clean.src);
+
+module.exports = clean;
