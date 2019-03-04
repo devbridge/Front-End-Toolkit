@@ -16,6 +16,12 @@ module.exports = series(
     prepareAssets,
     prepareConfig,
     clearImageCache,
-    parallel(watchScss, watchHtmlRenderer, watchScripts, watchSvg, watchImagesOptimization),
-    liveServer,
+    parallel(
+        liveServer,
+        watchScss,
+        watchHtmlRenderer,
+        watchScripts,
+        watchSvg,
+        watchImagesOptimization,
+    ),
 );
