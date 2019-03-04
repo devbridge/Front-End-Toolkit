@@ -18,11 +18,6 @@ module.exports = () => {
 
     // PATHS
 
-    const accessibility = {
-        dist: 'reports/txt',
-        src: `./${SRC_DIR}/**/*.html`,
-    };
-
     const clean = {
         src: `${ROOT_DIR}${DIST_DIR}/**`,
     };
@@ -90,7 +85,6 @@ module.exports = () => {
     };
 
     const paths = {
-        accessibility,
         clean,
         dist: DIST_DIR,
         env,
@@ -108,23 +102,6 @@ module.exports = () => {
     };
 
     // OPTIONS
-
-    /* Reference: https://github.com/yargalot/AccessSniff#options */
-    const accessSniff = {
-        accessibilityLevel: 'WCAG2A',
-        browser: false,
-        force: true,
-        reportLevels: {
-            error: true,
-            notice: false,
-            warning: false,
-        },
-    };
-
-    /* Reference: https://github.com/yargalot/AccessSniff#reports */
-    const accessSniffReport = {
-        reportType: 'txt',
-    };
 
     /*
     * Reference: https://github.com/postcss/autoprefixer#options
@@ -214,8 +191,6 @@ module.exports = () => {
     };
 
     const options = {
-        accessSniff,
-        accessSniffReport,
         autoprefixer,
         csso,
         giflossy,
