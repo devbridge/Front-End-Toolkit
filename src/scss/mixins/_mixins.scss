@@ -11,11 +11,6 @@
     }
 }
 
-@mixin vertical-align($block: inline-block, $align: middle) {
-    display: $block;
-    vertical-align: $align;
-}
-
 // Mixin for removing white spaces of inline-block
 @mixin remove-whitespace($apply-to: none, $setsize: $base-font-size) {
     @if ($apply-to == none) {
@@ -57,7 +52,7 @@
     visibility: hidden;
 }
 
-%visuallyhidden {
+%visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -67,7 +62,7 @@
     position: absolute;
     width: 1px;
 
-    // Extends the .visuallyhidden class to allow the element to be focusable
+    // Extends the .visually-hidden class to allow the element to be focusable
     // when navigated to via the keyboard: h5bp.com/p
     &.focusable {
         &:focus,
@@ -78,34 +73,6 @@
             overflow: visible;
             position: static;
             width: auto;
-        }
-    }
-}
-
-// SUSY HELPER: helps to set clear: left to first in row, and remove margin for last in row
-@mixin cols-in-row($number, $reset: false, $last-flow: to) {
-    clear: none;
-
-    @if(not($reset)) {
-        &:nth-of-type(#{$number}n) {
-            @if ($last-flow == to) {
-                @include last;
-            } @else {
-                margin-right: 0;
-            }
-        }
-
-        &:nth-of-type(#{$number}n + 1) {
-            clear: left;
-        }
-    } @else {
-        &:nth-of-type(#{$number}n) {
-            float: left;
-            margin-right: gutter();
-        }
-
-        &:nth-of-type(#{$number}n + 1) {
-            clear: none;
         }
     }
 }

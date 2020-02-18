@@ -1,12 +1,13 @@
-module.exports = function (done) {
-    const gulp = require('gulp');
-    const runSequence = require('run-sequence').use(gulp);
+const { series } = require('gulp');
 
-    return runSequence(
-        'check-deps',
-        'prepare-assets',
-        'prepare-config',
-        'clear-image-cache',
-        done
-    );
-};
+const clearImageCache = require('./clear-image-cache');
+const prepareAssets = require('./prepare-assets');
+const prepareConfig = require('./prepare-config');
+
+const production = series(
+    prepareAssets,
+    prepareConfig,
+    clearImageCache,
+);
+
+module.exports = production;

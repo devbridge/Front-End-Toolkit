@@ -1,9 +1,10 @@
-module.exports = function () {
-    const gulp = require('gulp');
-    const config = require('../gulp.config.js')();
-    const rename = require('gulp-rename');
+const { dest, src } = require('gulp');
+const rename = require('gulp-rename');
 
-    return gulp.src(config.environmentConfig.source)
-        .pipe(rename('env.js'))
-        .pipe(gulp.dest(config.path.DEST));
-};
+const config = require('../gulp.config.js')();
+
+const prepareConfig = () => src(config.paths.env.src)
+    .pipe(rename('env.js'))
+    .pipe(dest(config.paths.dist));
+
+module.exports = prepareConfig;

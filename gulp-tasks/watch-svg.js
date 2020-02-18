@@ -1,11 +1,13 @@
-module.exports = function () {
-    const gulp = require('gulp');
-    const watch = require('gulp-watch');
-    const runSequence = require('run-sequence').use(gulp);
-    const config = require('../gulp.config.js')();
+const { series, watch } = require('gulp');
 
-    watch(
-        config.svg.sourceFolder + '**/*.svg',
-        () => runSequence('create-svg-sprite', 'live-reload')
-    );
-};
+const config = require('../gulp.config.js')();
+
+const createSvgSprite = require('./create-svg-sprite');
+const liveReload = require('./live-reload');
+
+const watchSvg = () => watch(
+    config.paths.sprite.src,
+    series(createSvgSprite, liveReload),
+);
+
+module.exports = watchSvg;

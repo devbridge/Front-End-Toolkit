@@ -1,9 +1,11 @@
 {
-  "extends": "airbnb",
-  "rules": {
-    "no-unused-vars": 0,
-    "import/prefer-default-export": 1,
-    "import/no-unresolved": 0,
-    "import/extensions": 0
-  }
+    "extends": "airbnb",
+    "rules": {
+        "indent": ["error", 4],
+        "import/prefer-default-export": 1,
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "import/no-unresolved": 0,
+        "import/extensions": 0,
+        "no-unused-vars": 0
+    }
 }

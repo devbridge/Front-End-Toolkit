@@ -1,11 +1,13 @@
-module.exports = function () {
-    const gulp = require('gulp');
-    const watch = require('gulp-watch');
-    const runSequence = require('run-sequence').use(gulp);
-    const config = require('../gulp.config.js')();
+const { series, watch } = require('gulp');
 
-    watch(
-        config.path.ALL,
-        () => runSequence('compile-scripts', 'live-reload')
-    );
-};
+const config = require('../gulp.config.js')();
+
+const compileScripts = require('./compile-scripts');
+const liveReload = require('./live-reload');
+
+const watchScripts = () => watch(
+    config.paths.scripts.all,
+    series(compileScripts, liveReload),
+);
+
+module.exports = watchScripts;

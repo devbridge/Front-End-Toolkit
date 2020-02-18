@@ -1,20 +1,11 @@
-const gulp = require('gulp');
+const fs = require('fs');
+const path = require('path');
 
-// Load all tasks from gulp-tasks folder
+const tasksDir = './gulp-tasks';
+const normalizedPath = path.join(__dirname, tasksDir);
 
-gulp.task('develop-safe', function () {
-    return require('check-dependencies')({
-        install: true,
-        verbose: true
-    }, function () {
-        require('gulp-task-loader')();
-
-        return gulp.start('develop');
-    });
-});
-
-gulp.task('develop-plain', function () {
-    require('gulp-task-loader')();
-
-    return gulp.start('develop');
+fs.readdirSync(normalizedPath).forEach((file) => {
+    const name = file.replace(/\.[^/.]+$/, '');
+    // eslint-disable-next-line global-require, import/no-dynamic-require
+    exports[name] = require(`${tasksDir}/${file}`);
 });
