@@ -14,7 +14,8 @@
     ],
     "dependencies": {},
     "scripts": {
-        "lint-scss": "sass-lint \"src/**/*.scss\" --verbose",
+        "lint-styles": "npx stylelint \"**/*.css\"",
+        "lint-styles-fix": "npx stylelint \"**/*.css\" --fix",
         "lint-scripts": "eslint \"src/**/*.js\" --fix",
         "start": "gulp develop ",
         "test-wcag": "node test-accessibility.js"
@@ -60,7 +61,6 @@
         "gulp-raster-update": "0.1.0",
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.2",
-        "gulp-sass-lint": "1.4.0",
         "gulp-sourcemaps": "2.6.5",
         "gulp-svg-sprite": "1.5.0",
         "gulp-uglify": "3.0.1",
@@ -74,7 +74,8 @@
         "pa11y": "5.1.0",
         "pa11y-reporter-html": "1.0.0",
         "puppeteer": "1.12.2",
-        "sass-lint": "1.12.1",
+        "stylelint": "13.3.3",
+        "stylelint-config-standard": "20.0.0",
         "webpack": "4.29.6",
         "webpack-stream": "5.2.1",
         "yargs": "13.2.1"
