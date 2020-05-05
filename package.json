@@ -14,8 +14,8 @@
     ],
     "dependencies": {},
     "scripts": {
-        "lint-styles": "npx stylelint \"**/*.css\"",
-        "lint-styles-fix": "npx stylelint \"**/*.css\" --fix",
+        "lint-styles": "npx stylelint \"**/*.scss\"",
+        "lint-styles-fix": "npx stylelint \"**/*.scss\" --fix",
         "lint-scripts": "eslint \"src/**/*.js\" --fix",
         "start": "gulp develop ",
         "test-wcag": "node test-accessibility.js"
