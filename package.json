@@ -73,7 +73,7 @@
         "lint-staged": "8.1.4",
         "pa11y": "5.1.0",
         "pa11y-reporter-html": "1.0.0",
-        "puppeteer": "1.12.2",
+        "puppeteer": "1.13.0",
         "sass-lint": "1.12.1",
         "webpack": "4.29.6",
         "webpack-stream": "5.2.1",
