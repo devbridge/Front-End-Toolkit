@@ -70,7 +70,7 @@
         "imagemin-mozjpeg": "8.0.0",
         "imagemin-pngquant": "7.0.0",
         "imagemin-zopfli": "6.0.0",
-        "lint-staged": "8.1.4",
+        "lint-staged": "13.1.0",
         "pa11y": "5.1.0",
         "pa11y-reporter-html": "1.0.0",
         "puppeteer": "1.12.2",
